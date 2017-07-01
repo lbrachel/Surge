@@ -1,0 +1,180 @@
+# 07.01 [Surge/Shadowrocket]
+修复：有可能引起微信加载慢的问题
+修复：优酷屏蔽广告失效
+新增：虾米音乐方面功能
+
+# 06.31 [Surge/Shadowrocket]
+删除：观看优酷会员视频 仅保留屏蔽广告功能
+
+# 06.30 [Surge/Shadowrocket]
+修复：0013 客户端启动广告拦截失效
+修复：淘宝 图标误拦截
+
+# 06.28 [Surge/Shadowrocket]
+解决 iOS11 App Store 打不开的问题 via.@ scomper
+
+# 06.27 [Surge/Shadowrocket]
+修复 众多 链接跳转失败的问题
+修复 同花顺 误拦截的问题
+屏蔽 知乎 问题中插入的广告
+屏蔽 闲鱼 启动广告
+屏蔽 0013 启动广告
+尝试解决 谷歌验证码的问题
+尝试解决 YouTube 播放失败的问题
+还有很多优化及调整 我给忘记了 暂时能记住的就这么多
+
+ps：京东、知乎等图片打不开是因为证书方面的问题（未安装或未信任）
+ps：Token 是屏蔽某些广告（包括优酷）必需的
+
+# 06.09 [Surge/Shadowrocket]
+修复 爱奇艺 首页无法刷新的问题
+完善 爱奇艺 广告屏蔽
+屏蔽 FTChinese 广告
+
+Ps：最新版 Rule OTA（运行出错请更新User Data）修改了对优酷的拦截方案（Token获取失败、iPad版无法观看的问题将得到改善）
+
+# 06.08 [Surge/Shadowrocket]
+增加 广告屏蔽条目
+修复 会引起 知乎 客户端连接失败的问题
+改善 App Store 下载失败的问题
+尽可能解决公共Wi-Fi的问题（有待考证）
+
+# 06.07 [Surge/Shadowrocket]
+修复 京东 跳转问题
+增加 47ks 广告屏蔽
+
+# 06.05 [Shadowrocket]
+修复 Apple Music 无法下载/播放的问题
+修复 iOS/WatchOS 更新慢的问题
+
+# 06.01 [Surge/Shadowrocket]
+修正 Shadowrocket 的 DNS
+优化 Onedrive 传输速度（Test）
+解决极小部分公共 WiFi 验证问题（也可以删除 “dns-server” 部分使得大部分公共 WiFi 验证问题得到改善，但这可能会影响 DNS 劫持以及 Apple 加速）
+
+顺便再提一点：公共 WiFi 由于每个实现的方式都不太一样，Surge 对于部分特殊实现的支持会有问题，断开先建立连接后重新开启即可
+
+# 05.28 [Surge/Shadowrocket]
+完善 爱奇艺 广告屏蔽
+修复 无法绑定淘宝的问题
+
+# 05.25 [Surge/Shadowrocket]
+增加 WPS 广告屏蔽	via.@runniewang
+
+# 05.19 [Surge/Shadowrocket]
+修复 什么值得买 闪退问题
+
+# 05.13 [Surge/Shadowrocket/PHP]
+增加 爱奇艺 广告屏蔽
+一些优化及调整
+
+# 05.12 [Surge/Shadowrocket/PHP]
+修复 乐视视频 无法播放
+增加两条对横幅广告的拦截
+
+# 05.07 [Surge/Shadowrocket/PHP]
+一些优化及调整
+
+# 04.22 [Surge/Shadowrocket/PHP]
+修复 今日头条 图片无法加载
+修复 爱奇艺 一系列问题
+
+# 04.20 [Surge/Shadowrocket/PHP]
+加强对广告的拦截
+删除一些误杀的规则
+一些优化及调整
+
+* 04.20 [Workflow]
+去掉了国内源地址
+自动生成 TOKEN
+开启 MITM 后会提示是否开启优酷：屏蔽广告+破解会员视频 功能
+
+# 04.17 [Surge/Shadowrocket/PHP]
+修复对 广告 的误拦截
+删除 不常用视频 拦截广告
+完善 直连/代理 规则
+完善 优酷 广告/会员视频问题
+
+# 04.13 [Surge/Shadowrocket/PHP]
+更新对视频广告拦截的规则
+删减一部分影响体验的规则
+
+Ps：最近太忙了 很久没更新也没看群里消息 向大家道个歉阿 有任何问题私聊我就行了
+
+# 04.05 [Surge/Shadowrocket/PHP]
+精简规则并去除多余/重复规则
+一些优化及调整
+
+# 03.29 [Surge/Shadowrocket/PHP]
+完善对 新浪微博 广告的拦截
+完善对 人人 广告的拦截
+完善对 知乎 广告的拦截
+完善对 有道词典 的广告拦截
+优化对 威锋 的规则
+增加对 广告联盟 的拦截
+增加对 小说网站 的广告拦截
+增加对 直播吧 的广告拦截
+精简规则并去除多余/重复规则
+一些优化及调整
+
+# 03.17 [Surge/Shadowrocket/PHP]
+好吧 首先道个歉 应大家要求 [🍎 Proxy] 重新上线 麻烦大家再改一次
+重新对广告拦截部分进行精简以及调整
+
+# 03.16 [Surge/Shadowrocket/PHP]
+增加对 汽车之家 广告的拦截
+增加对 起点、掌阅、书旗 广告的拦截
+精简规则并去除多余/重复规则
+一些优化及调整
+
+# 03.12 [Surge/Shadowrocket/PHP]
+增加大量对 腾讯、百度、新浪、搜狐、搜狗、360 等广告屏蔽
+去除多余/重复规则
+
+# 03.10 [Surge/Shadowrocket/PHP]
+修复 百度贴吧 网络问题
+修复 什么值得买 淘宝跳转出错
+一些优化及调整
+
+# 03.08 [Surge/Shadowrocket]
+增加对 闲鱼 启动广告的拦截
+去除多余/重复规则
+
+# 03.05 [Surge/Shadowrocket/PHP]
+增加对 Twitter、Tumblr、YouTube 部分广告的屏蔽   via.@leosam1995
+去除一部分重复规则（这两天没休息好，眼睛肿了，不仔细找了，过几天再说）
+去除京东、淘宝自动跳转手机页面
+暂时过滤对 apple 进行流量管控（🍎 Proxy 大部分暂时失效）
+
+# 03.04 [Surge/Shadowrocket/PHP]
+广告排版优化
+增强对视频广告的过滤
+感谢 Telegram 群里的 @leosam1995 提供规则上的协助
+
+# 03.02 [Surge/Shadowrocket/PHP]
+增加广告的屏蔽条目   via.@wzymmy
+
+# 02.27 [Surge/Shadowrocket/PHP]
+修复 Shadowrocket 连接 Apple 困难的问题（Surge 暂时也采用此策略）
+增强对部分广告的屏蔽
+增强对运营商广告的屏蔽
+感谢 Telegram 群里的 @suisr9255 提供 Workflow 帮助
+
+# 02.24 [Surge/Shadowrocket/PHP]
+经过测试 规则完整适配最新版本
+删除已过期或已失效的规则/网址
+感谢 Telegram 群里的 @leosam1995、@LisonFan 提供规则上的协助
+
+Worfklow 脚本也更新了，因为 Github 被墙了，添加了国内的七牛云地址并自动检测当前 IP 是否可以访问 Github
+为什么加个检测呢？因为 Github 的更新优先级永远是最高的，还是推荐从 Github 获取最新规则！
+
+# 02.22 [Surge]
+适配最新版本
+
+# 02.17 [Surge/Shadowrocket/PHP]
+彻底优化 重新排版 改动很多 不用多说
+
+# 02.15 [Surge/Shadowrocket/PHP]
+处理了很多问题，依旧还有太多问题，故移除第三方广告库
+最近苹果服务器连接困难，重新加回 AppleDNS，选择 🍎 Proxy - 🍎 Auto 可以改善一些问题
+（Shadowrocket 的 [Host] 模块暂时有问题，所以没有添加，等待作者更新修复）
