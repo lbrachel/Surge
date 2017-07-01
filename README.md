@@ -75,7 +75,7 @@
     其他 Wi-Fi 网络环境下的设备可以输入已经开启共享代理的 Surge 设备的 IP 地址和端口号，（技巧：Surge Log 中能看到开启后本机的 IP 地址和监听端口）将 IP 地址填写到需要共享设备的 Wi-Fi 信息的 HTTP 代理里即可。
 
 
-#### 🏃 Auto / Benchmarik
+#### 🛠Auto Test Group / Benchmarik
 
     测试结果仅供参考，无法检测出 VPS 的带宽
 
