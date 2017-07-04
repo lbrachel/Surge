@@ -1,0 +1,25 @@
+🌍 Direct = direct
+
+🇭🇰HK-Azure = custom, 40.83.125.44,37760,chacha20,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇸🇬SG-Aliyun = custom, 128.199.98.94,27304,chacha20, fastspeed666.info,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇺🇸US-Aliyun = custom, 47.89.253.72,33273,chacha20,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇷🇺RU-AT = custom, 213.183.48.180,25802,rc4-md5, Awuldis,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇷🇺RU-KHB = custom, 92.223.72.67,33012,chacha20,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇯🇵 JP-Vultr = custom, 153.125.239.205,39656,chacha20,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇬🇧UK-Hetnix = custom, 185.120.34.3,39656,chacha20,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+
+
+☁️ Proxy = select,🌍 Direct,🛠Auto Test Group,🇭🇰HK-Azure,🇸🇬SG-Aliyun,🇺🇸US-Aliyun,🇷🇺RU-AT,🇷🇺RU-KHB,🇯🇵 JP-Vultr,🇬🇧UK-Hetnix
+
+🔰 Proxy = select,🌍 Direct,☁️ Proxy
+
+🍎 Proxy = select,🌍 Direct,🇷🇺RU-AT
+
+🛠Auto Test Group = url-test,🇭🇰HK-Azure,🇸🇬SG-Aliyun,🇺🇸US-Aliyun,🇷🇺RU-AT,🇷🇺RU-KHB,🇯🇵 JP-Vultr,🇬🇧UK-Hetnix,url = http://www.gstatic.com/generate_204,interval = 1200
