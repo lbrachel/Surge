@@ -16,21 +16,11 @@
 * Apple 服务加速（App Store、Apple Music、Apple流媒体、iCloud备份、iCloud Drive、iTunes 等）
 * 国外常用网站加速（Google/Youtube/Twitter/Facebook/instagram/wikipedia/Github 等）
 
-🤖️ Android SSR ACL
+♻️ Download
 
-	ACL4SSR：https://github.com/ACL4SSR/ACL4SSR
+    User Data：https://workflow.is/workflows/7100cebf06ad4adead9aac76e45e50b2
 
-🈲️ 浏览器广告
-
-    全平台：Adguard - https://adguard.com/en/welcome.html
-
-🆙 Workflow
-
-	User Data Advanced：https://workflow.is/workflows/8876136f831c4c1c812528b023271aef
-
-	User Data Basis：https://workflow.is/workflows/abb6e6e21d2647d0be7a3484b86f0ef9
-
-	Rule OTA：https://workflow.is/workflows/75c78511c8014f44ab056b46674ee5ac
+    Rule OTA：https://workflow.is/workflows/5506a2e1fe68496a92ed9087475e1b25
 
 
     Surge 视频教程：https://youtu.be/IRJOAnPZWJM
@@ -40,15 +30,49 @@
     PS：基于 爱兔联盟.com 提供的节点快速获取并使用
 
 
+
+    Hosts：https://async.be/Rule/Basic/Hosts
+    （免服务器 / 自动更新 ／ 支持 google、instagram、twitter 等主流外网）
+
+    Telegram：https://telegram.me/rulenews
+    （更新日志 / 新内容发布 ／ 更方便快捷获取更新内容 ／ 进阶功能教程）
+
+🤖️ Android SSR ACL
+
+	ACL4SSR：https://github.com/ACL4SSR/ACL4SSR
+
+🈲️ 浏览器广告
+
+    全平台：Adguard - https://adguard.com/en/welcome.html
+    
+    
+# line
+
+About | Raw |
+---------|:---------:
+新浪微博 | [@lhie1](http://www.weibo.com/1748625493)
+Telegram 讨论组| https://telegram.me/lhie1x
+Telegram 通知频道| https://t.me/rulenews
+购买翻墙服务| [爱兔联盟（通往新宇宙的船票）](https://爱兔联盟.com)
+
+Tutor | Raw |
+---------|:---------:
+@Eval | https://twitter.com/OAuth4
+@Scomper| https://medium.com/@scomper
+@Neurogram| http://www.taguage.com/user?id=181456
+@suisr9255| -
+@Hackl0us| https://github.com/Hackl0us
+    
+
 # Q&A
 
 ### ☁️ Proxy & 🔰 Proxy & 🍎 Proxy
 
-	☁️ Proxy：🌍 Direct - 直连，不可访问外网；代理服务器 - 可访问外网
+	☁️ Proxy：管控国外的流量；🌍 Direct - 直连，不可访问外网；代理服务器 - 可访问外网
 
-    🔰 Proxy：🌍 Direct - 智能分流 (Pac)；☁️ Proxy - 全局代理
+    🔰 Proxy：管控国内的流量；🌍 Direct - 智能分流 (Pac)；☁️ Proxy - 全局代理
 
-    🍎 Proxy： 如果某些服务直连困难，🍎 Proxy - 代理服务器，可能会改善一些问题。
+    🍎 Proxy： 管控苹果的流量；如果苹果某些服务直连困难，设其为代理，可能会改善一些问题：🍎 Proxy - 代理服务器
 
     建议 ： ☁️ Proxy - 代理服务器；🔰 Proxy - 🌍 Direct ；🍎 Proxy - 🌍 Direct/代理服务器
 
