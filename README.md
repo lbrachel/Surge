@@ -52,9 +52,9 @@
 
 ### URL
 ````
-Surge：https://raw.githubusercontent.com/lhie1/Surge/master/Surge_Lite.conf
+Surge：https://raw.githubusercontent.com/BARGAIN138/Surge/master/SURGE.conf
 
-Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket_Lite.conf
+Shadowrocket：https://raw.githubusercontent.com/BARGAIN138/shadowrocket/master/shadowrocket.conf
 ````
 导入后请务必[安装证书](#mitm证书的安装及信任)
 
