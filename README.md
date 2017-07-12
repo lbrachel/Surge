@@ -1,4 +1,4 @@
-# 用户手册
+# 使用手册
 
 ### 简介
 
@@ -7,10 +7,10 @@
 ---
 * [可实现功能](#可实现功能)
 * 导入方式
-    * ~~URL（暂弃）~~
+    * [URL](#url)
     * [Workflow](#workflow)
-    	* [User Data](#user-data)
-    	* [Rule OTA](#rule-ota)
+    	* User Data
+    	* Rule OTA
     * [~~在线更新（暂弃）~~](https://github.com/lhie1/RuleList)
 * [MitM 证书的安装及信任](#mitm证书的安装及信任)
 * [Hosts（免服务器翻墙）](#hosts)
@@ -50,6 +50,18 @@
 
 ---
 
+### URL
+````
+Surge：https://raw.githubusercontent.com/lhie1/Surge/master/Surge_Lite.conf
+
+Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket_Lite.conf
+````
+导入后请务必[安装证书](#mitm证书的安装及信任)
+
+![URL](https://raw.githubusercontent.com/lhie1/Surge/master/images/URL.jpeg)
+
+---
+
 ### Workflow
 
 * [User Data](#user-data)
@@ -67,6 +79,7 @@
         * [Google](#google)
         * [Netflix](#netflix)
         * [MytvSUPER](#mytvsuper)
+	* [Spotify](#spotify)
     * Features_Module
         * [Adblocker](#adblocker)
         * [TestFlight](#testflinght)
@@ -78,7 +91,7 @@
     * 生成规则
 
 #### User Data
-[下载地址](https://workflow.is/workflows/7100cebf06ad4adead9aac76e45e50b2)
+[下载地址](https://workflow.is/workflows/6c05e2bb808a44bdb1d5337c07feff0b)
 
 #### Rule OTA
 [下载地址](https://workflow.is/workflows/1178156c473b45cb9b10205b39e46faa)
@@ -109,6 +122,10 @@
 ````
 某些服务器/节点不可以观看 MytvSUPRE，开启此功能为 MytvSUPRE 选择一个单独的节点
 ````
+
+* ##### Spotify
+````
+某些服务器/节点的 Spotify 的内容不同，开启此功能为 Spotify 选择一个单独的节点
 
 ---
 
