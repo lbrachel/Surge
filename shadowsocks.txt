@@ -1,17 +1,17 @@
 [Proxy]
 🌍 Direct = direct
 
-🇭🇰HK-Azure = custom, 40.83.125.44,37760,camellia-256-cfb,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇭🇰HK-Azure = custom, 40.83.125.44,37760,chacha20-ietf,BARGAIN123,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
 
 🇸🇬SG-Aliyun = custom, 128.199.98.94,27304,chacha20, fastspeed666.info,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
 
-🇯🇵JP-Vultr = custom, 45.32.45.165,33273,camellia-256-cfb,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇯🇵JP-Vultr = custom, 45.32.45.165,33273,chacha20-ietf,BARGAIN123,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
 
-🇺🇸US-QN = custom, 199.180.255.21,39656,camellia-256-cfb,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇺🇸US-QN = custom, 199.180.255.21,39656,chacha20-ietf,BARGAIN123,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
 
 🇺🇸US-ST = custom, 104.160.185.152,25802,rc4-md5,Awuldis,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
 
-🇷🇺RU-KHB = custom, 92.223.72.67,33012,camellia-256-cfb,BARGAIN,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇷🇺RU-KHB = custom, 92.223.72.67,33012,chacha20-ietf,BARGAIN123,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
 
 
 [Proxy Group]
