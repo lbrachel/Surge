@@ -52,9 +52,9 @@
 
 ### URL
 ````
-Surge：https://raw.githubusercontent.com/BARGAIN138/Surge/master/SURGE.conf
+Surge：https://raw.githubusercontent.com/lhie1/Surge/master/Surge_Lite.conf
 
-Shadowrocket：https://raw.githubusercontent.com/BARGAIN138/shadowrocket/master/shadowrocket.conf
+Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket_Lite.conf
 ````
 导入后请务必[安装证书](#mitm证书的安装及信任)
 
@@ -79,7 +79,7 @@ Shadowrocket：https://raw.githubusercontent.com/BARGAIN138/shadowrocket/master/
         * [Google](#google)
         * [Netflix](#netflix)
         * [MytvSUPER](#mytvsuper)
-	* [Spotify](#spotify)
+        * [Spotify](#spotify)
     * Features_Module
         * [Adblocker](#adblocker)
         * [TestFlight](#testflinght)
@@ -89,12 +89,13 @@ Shadowrocket：https://raw.githubusercontent.com/BARGAIN138/shadowrocket/master/
     * 自动修复`module`模块地址
     * 更新规则
     * 生成规则
+    * [安装证书](#mitm证书的安装及信任)
 
 #### User Data
-[下载地址](https://workflow.is/workflows/6c05e2bb808a44bdb1d5337c07feff0b)
+[下载地址](https://workflow.is/workflows/7dee8634229d4a48b81d96c8c912d87b)
 
 #### Rule OTA
-[下载地址](https://workflow.is/workflows/1178156c473b45cb9b10205b39e46faa)
+[下载地址](https://workflow.is/workflows/a70c1f75e37446cbb27d3045b7b57fe9)
 
 ---
 
@@ -126,6 +127,7 @@ Shadowrocket：https://raw.githubusercontent.com/BARGAIN138/shadowrocket/master/
 * ##### Spotify
 ````
 某些服务器/节点的 Spotify 的内容不同，开启此功能为 Spotify 选择一个单独的节点
+````
 
 ---
 
@@ -148,22 +150,40 @@ Shadowrocket：https://raw.githubusercontent.com/BARGAIN138/shadowrocket/master/
 ---
 
 ### MitM 证书的安装及信任
-````
+
 简介：MitM（即 Man-in-the-middle attack 简称 MitM，用于解密 HTTPS 的流量）
 
-安装：
+````
+iOS：
+
+1. 安装：
 * Surge：配置 - 编辑配置 - HTTPS 解密 - 安装证书
 * Shadowrocket：设置 - 证书 - 安装证书
 
-信任：
+2. 信任：
 设置 - 通用 - 关于本机 - 证书信任设置 - 信任
 
 ````
+
+macOS：
+
+![macOS_MitM](https://raw.githubusercontent.com/lhie1/Surge/master/images/macOS_MitM.jpg)
+
 ---
 
 ### line
 
+微博：[lhie1](http://weibo.com/1748625493)
+
+墙洞（规则讨论/交流）：[https://telegram.me/lhie1x](https://telegram.me/lhie1x)
+
+规则更新通知（新特性/教程/说明）：[http://t.me/RuleNews](http://t.me/RuleNews)
+
 购买翻墙服务：[https://爱兔联盟.com](https://爱兔联盟.com)
+
+长时间的维护和分享离不开大家的鼓励与支持，如果帮助到您，可以考虑捐赠，谢谢。
+
+![Pay](https://raw.githubusercontent.com/lhie1/Surge/master/images/Pay.jpeg)
 
 ---
 
@@ -173,7 +193,6 @@ https://async.be/Rule/Basic/Hosts
 
 （免服务器 / 自动更新 ／ 支持 google、instagram、twitter 等主流外网）
 ````
-
 ---
 
 ### Android SSR ACL
@@ -185,17 +204,16 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/banAD.acl
 	
 2. gfwlist-banAD.acl（默认直连）去广告+局域网直连+国外gfwlist列表代理
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/gfwlist-banAD.acl
-
+	 
 3. onlybanAD.acl（默认代理）去广告+局域网直连+全局代理
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/onlybanAD.acl
 	
 4. fullgfwlist.acl（默认直连）国外gfwlist列表代理，没有去广告，没有白名单（原版SS可直接复制文件内容使用）
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/fullgfwlist.acl
-	
+
 5. backcn-banAD.acl（默认直连）去广告+国内IP段代理+国内常用域名代理+局域网直连+国外直连
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl
 ````
-
 ---
 
 ### 浏览器广告
@@ -203,7 +221,6 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl
 Adguard：https://adguard.com/en/welcome.html
 ````
 ---
-
 
 ### Q&A
 
@@ -273,7 +290,7 @@ ShadowsocksX：https://github.com/shadowsocks/shadowsocks-iOS/releases
 ShadowsocksX-R (R)：https://github.com/yichengchen/ShadowsocksX-R/releases
 
 ShadowsocksX-NG (R)：https://github.com/qinyuhang/ShadowsocksX-NG/releases
-
+        
 Flora：https://github.com/huacnlee/flora-kit
 
 Specht Lite：https://github.com/zhuhaow/SpechtLite/releases
@@ -292,7 +309,7 @@ ShadowsocksR (R)：https://github.com/shadowsocksr/shadowsocksr-csharp/releases
 Surge for iOS：https://medium.com/@scomper/surge-配置文件-a1533c10e80b#.9fpdjn34f
     
 Surge for macOS：https://medium.com/@scomper/surge-for-mac-简明指南-f6f357b8f09c#.n55zdnvnd
-
+    
 Shadowrocket for iOS：http://matrix.sspai.com/p/c113cba0
     
 SSR for Windows：https://ocvpn.wordpress.com/2016/10/15/shadowsocksr-for-windows设置教程
@@ -447,23 +464,6 @@ computer = server:system
 # suspend: "true" 或 "false"
 # 在该网络下 Surge 将暂停工作。 请注意，如果你在该网络下直接启动 Surge，那么 
 # Surge 依然会工作。只有当从其他网络切换到该网络时，Surge 才会暂停。
-[SSID Setting]
-"SSID Here" suspend=true
-
-# 详细使用方法请参见使用手册: http://manual.nssurge.com/mitm.html
-[MITM]
-enable = true
-# Surge 仅会对在此定义的主机名进行 HTTPS 解密，允许使用 * 通配符。
-# 某些应用会使用加强的安全策略，仅允许特定的服务器证书或者 CA。启动 MitM 可能
-# 导致这些应用出现问题。
-hostname = *google.com
-ca-p12 = MIIJtQ.........
-ca-passphrase = password
-````
----
-        
-### 鸣谢
-* [@Eval](https://twitter.com/OAuth4)
 * [@Scomper](https://medium.com/@scomper)
 * [@Neurogram](http://www.taguage.com/user?id=181456)
 * @suisr9255
