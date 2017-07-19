@@ -7,12 +7,12 @@
 ---
 * [可实现功能](#可实现功能)
 * 导入方式
-    * [URL](#url)
+    * [URL_Lite](#url)
     * [Workflow](#workflow)
     	* User Data
     	* Rule OTA
     * [~~在线更新（暂弃）~~](https://github.com/lhie1/RuleList)
-* [MitM 证书的安装及信任](#mitm证书的安装及信任)
+* [证书的安装及信任](#mitm)
 * [Hosts（免服务器翻墙）](#hosts)
 * [Android SSR ACL](#android-ssr-acl)
 * [浏览器广告](#浏览器广告)
@@ -39,6 +39,7 @@
 * 拦截常用应用程序的数据统计
 * 拦截常用应用程序的隐私跟踪
 * 拦截各大购物网站的运营商劫持
+* 拦截 Content Security Policy 劫持
 * 屏蔽部分应用程序的启动广告
 * 屏蔽部分运营商劫持网页弹出的流量统计
 * 屏蔽部分运营商劫持网页弹出的漂浮球广告
@@ -51,12 +52,16 @@
 ---
 
 ### URL
+
+精简版：
+
+用于`Surge/Shadowrcket_URL`导入方式，阉割了对`虾米音乐/优酷视频/百度翻译/Flex3`等广告的拦截，没有`Workflow`的节点定制以及功能开关
 ````
 Surge：https://raw.githubusercontent.com/lhie1/Surge/master/Surge_Lite.conf
 
 Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket_Lite.conf
 ````
-导入后请务必[安装证书](#mitm证书的安装及信任)
+导入后请务必[安装证书](#mitm)
 
 ![URL](https://raw.githubusercontent.com/lhie1/Surge/master/images/URL.jpeg)
 
@@ -73,6 +78,7 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
     * 自定义添加[SSID Setting]规则
     * 自定义删除规则（All）
     * 生成证书
+    * [Widget 策略](#widget-策略)
 * [Rule OTA](#rule-ota)
     * [Special_Proxy](#special_proxy)
         * [AuthKey](#authkey)
@@ -84,49 +90,53 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
         * [Adblocker](#adblocker)
         * [TestFlight](#testflinght)
         * [Emoji](#emoji)
-        * ~~Youku~~
+        * [Youku](#youku)
     * 运行时检查更新并自动下载
     * 自动修复`module`模块地址
     * 更新规则
     * 生成规则
-    * [安装证书](#mitm证书的安装及信任)
-
+    * [安装证书](#mitm)
+    * [常见问题](#workflow_qa)
+---
 #### User Data
 [下载地址](https://workflow.is/workflows/7dee8634229d4a48b81d96c8c912d87b)
 
 #### Rule OTA
-[下载地址](https://workflow.is/workflows/a70c1f75e37446cbb27d3045b7b57fe9)
+[下载地址](https://workflow.is/workflows/7f1c9a96c51648d990d34aafa2077ff6)
 
 ---
 
+#### Widget 策略
+
+![Widget](https://raw.githubusercontent.com/lhie1/Surge/master/images/Widget.JPG)
+
 #### Special_Proxy
 * ##### AuthKey
-````
-1. 目前多个地方去广告等需要使用 AuthKey 进行认证，防止接口被拷贝盗用
-2. 使用过程中需要对生成 AuthKey 的 IP 地址进行认证，所以需要选择代理服务器生成，避免直连情况下的 IP 地址的频繁变换导致认证失败
-3. AuthKey 字段为接口加密数据定位符,使用 OpenSSL RSA4096 加密生成的下载用户唯一权限标识符
-4. 无 AuthKey 将导致无法请求接口返回 400 错误，AuthKey 包含唯一信息,请求过多将导致 AuthKey 加入黑名单
-5. 网络请求 Header 可以看到 I P及 TimeStamp 信息
-````
+
+1. 目前多个地方`虾米音乐/优酷视频/百度翻译/Flex3`等屏蔽广告需要使用`AuthKey`进行认证，防止接口被拷贝盗用
+2. 使用过程中需要对生成`AuthKey`的`IP`地址进行认证，所以需要选择代理服务器生成，避免直连情况下的`IP`地址的频繁变换导致认证失败
+3. `AuthKey`字段为接口加密数据定位符,使用`OpenSSL RSA4096`加密生成的下载用户唯一权限标识符
+4. 无`AuthKey`将导致无法请求接口返回`400`错误，`AuthKey`包含唯一信息,请求过多将导致`AuthKey`加入黑名单
+5. 网络请求`Header`可以看到`IP`及`TimeStamp`信息
 
 * ##### Google
 ````
-某些服务器/节点访问 Google 将会出现验证码，开启此功能为 Google 选择一个单独的节点
+某些服务器/节点访问`Google`将会出现验证码，开启此功能为`Google`单独选择一个专用节点
 ````
 
 * ##### Netflix
 ````
-某些服务器/节点不可以观看 Netflix，开启此功能为 Netflix 选择一个单独的节点
+某些服务器/节点不可以观看`Netflix`，开启此功能为`Netflix`单独选择一个专用节点
 ````
 
 * ##### MytvSUPRE
 ````
-某些服务器/节点不可以观看 MytvSUPRE，开启此功能为 MytvSUPRE 选择一个单独的节点
+某些服务器/节点不可以观看`MytvSUPRE`，开启此功能为`MytvSUPRE`单独选择一个专用节点
 ````
 
 * ##### Spotify
 ````
-某些服务器/节点的 Spotify 的内容不同，开启此功能为 Spotify 选择一个单独的节点
+某些服务器/节点的`Spotify`的内容不同，开启此功能为`Spotify`单独选择一个专用节点
 ````
 
 ---
@@ -139,23 +149,27 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
 
 * ##### TestFlinght
 ````
-开启此功能会在有只支持 TestFlinght 版本的规则时加载新规则
+开启此功能会在有只支持`TestFlinght`版本的规则时加载新规则
 ````
 
 * ##### Emoji
 ````
-关闭此功能 [Proxy Group] 则不再使用 Emoji 表情
+关闭此功能`[Proxy Group]`则不再使用`Emoji`表情
+````
+
+* ##### Youku
+````
+开启此功能将会屏蔽优酷视频广告（有可能会使视频加载时间过长或加载失败）
 ````
 
 ---
 
-### MitM 证书的安装及信任
+### MitM
 
-简介：MitM（即 Man-in-the-middle attack 简称 MitM，用于解密 HTTPS 的流量）
+简介：MitM（即 Man-in-the-middle attack，用于解密 HTTPS 的流量）
 
-````
 iOS：
-
+````
 1. 安装：
 * Surge：配置 - 编辑配置 - HTTPS 解密 - 安装证书
 * Shadowrocket：设置 - 证书 - 安装证书
@@ -171,6 +185,17 @@ macOS：
 
 ---
 
+### Workflow_Q&A
+
+![Workflow_Q&A](https://raw.githubusercontent.com/lhie1/Surge/master/images/Workflow_Q&A.JPG)
+
+1. 网络连接失败，切换节点或者更换网络环境
+2. 证书效验失败，[检查证书](#mitm)
+3. 获取文件出错，更新 [User Data](https://workflow.is/workflows/7dee8634229d4a48b81d96c8c912d87b)
+4. 脚本缺失，Get [Rule OTA](https://workflow.is/workflows/a70c1f75e37446cbb27d3045b7b57fe9)
+
+---
+
 ### line
 
 微博：[lhie1](http://weibo.com/1748625493)
@@ -179,7 +204,7 @@ macOS：
 
 规则更新通知（新特性/教程/说明）：[http://t.me/RuleNews](http://t.me/RuleNews)
 
-购买翻墙服务：[https://爱兔联盟.com](https://爱兔联盟.com)
+购买翻墙服务：[https://爱兔联盟.com](https://爱兔联盟.com)（[了解详情](https://github.com/lhie1/tuClub/blob/master/README.md)）
 
 长时间的维护和分享离不开大家的鼓励与支持，如果帮助到您，可以考虑捐赠，谢谢。
 
@@ -196,9 +221,9 @@ https://async.be/Rule/Basic/Hosts
 ---
 
 ### Android SSR ACL
-````
 项目主页：https://github.com/ACL4SSR/ACL4SSR
 
+````
 1. banAD.acl（默认代理）去广告+局域网直连+国内IP段直连+国内常用域名直连+国外代理
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/banAD.acl
 	
@@ -210,7 +235,7 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/onlybanAD.acl
 	
 4. fullgfwlist.acl（默认直连）国外gfwlist列表代理，没有去广告，没有白名单（原版SS可直接复制文件内容使用）
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/fullgfwlist.acl
-
+	
 5. backcn-banAD.acl（默认直连）去广告+国内IP段代理+国内常用域名代理+局域网直连+国外直连
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl
 ````
@@ -224,12 +249,17 @@ Adguard：https://adguard.com/en/welcome.html
 
 ### Q&A
 
+#### ⛔️ 广告屏蔽
+````
+绝大多数广告在未开启 Surge/Shadowrocket 时已经缓存到本地，广告屏蔽非立即生效，一般清理缓存就可以，部分应用需要卸载重装。
+````
+
 #### ☁️ Proxy & 🔰 Proxy & 🍎 Proxy
 ````
 ☁️ Proxy：管控国外的流量；🌍 Direct - 直连，不可访问外网；代理服务器 - 可访问外网
 
 🔰 Proxy：管控国内的流量；🌍 Direct - 智能分流 (Pac)；☁️ Proxy - 全局代理
-
+ 
 🍎 Proxy： 管控苹果的流量；如果苹果某些服务直连困难，设其为代理，可能会改善一些问题：🍎 Proxy - 代理服务器
 
 建议 ： ☁️ Proxy - 代理服务器；🔰 Proxy - 🌍 Direct ；🍎 Proxy - 🌍 Direct/代理服务器
@@ -303,7 +333,7 @@ ShadowsocksR (R)：https://github.com/shadowsocksr/shadowsocksr-csharp/releases
 ````
 
 ---
-
+ 
 📋 教程 / 说明：
 ````
 Surge for iOS：https://medium.com/@scomper/surge-配置文件-a1533c10e80b#.9fpdjn34f
@@ -464,6 +494,23 @@ computer = server:system
 # suspend: "true" 或 "false"
 # 在该网络下 Surge 将暂停工作。 请注意，如果你在该网络下直接启动 Surge，那么 
 # Surge 依然会工作。只有当从其他网络切换到该网络时，Surge 才会暂停。
+[SSID Setting]
+"SSID Here" suspend=true
+
+# 详细使用方法请参见使用手册: http://manual.nssurge.com/mitm.html
+[MITM]
+enable = true
+# Surge 仅会对在此定义的主机名进行 HTTPS 解密，允许使用 * 通配符。
+# 某些应用会使用加强的安全策略，仅允许特定的服务器证书或者 CA。启动 MitM 可能
+# 导致这些应用出现问题。
+hostname = *google.com
+ca-p12 = MIIJtQ.........
+ca-passphrase = password
+````
+---
+        
+### 鸣谢
+* [@Eval](https://twitter.com/OAuth4)
 * [@Scomper](https://medium.com/@scomper)
 * [@Neurogram](http://www.taguage.com/user?id=181456)
 * @suisr9255
