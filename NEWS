@@ -1,3 +1,12 @@
+# 07.25 [Surge/Shadowrocket]
+增加：快递100 的广告的拦截
+增加：小米运动的广告的拦截
+增加：Weico 的广告的拦截
+增加：StarFans 的广告的拦截
+增加：Discuz 的广告的拦截
+增加：果盘游戏的广告的拦截
+修复：斗鱼的mitm解密的地址错误的问题
+
 # 07.24 [Surge/Shadowrocket]
 增加：Facebook 的广告的拦截
 增加：MIUI、Flyme的广告拦截的拦截（有很多人使用共享模式）
