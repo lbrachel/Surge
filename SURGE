@@ -1,0 +1,797 @@
+#!MANAGED-CONFIG https://raw.githubusercontent.com/BARGAIN138/Surge/master/SURGE.conf interval=604800 strict=true
+
+
+[General]
+
+// Auto
+loglevel = notify
+dns-server = system
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+
+// iOS
+bypass-system = true
+external-controller-access = lhie1@0.0.0.0:6170
+
+// macOS
+interface = 0.0.0.0
+socks-interface = 0.0.0.0
+port = 8888
+socks-port = 8889
+
+// Off：On | "true" or "false"
+allow-wifi-access = true
+collapse-policy-group-items = true
+enhanced-mode-by-rule = false
+exclude-simple-hostnames = true
+hide-crashlytics-request = true
+ipv6 = true
+replica = false
+
+[Proxy]
+🌍 DIRECT = direct
+
+🇭🇰HK-Azure = custom, 40.83.125.44,37760,chacha20-ietf,BARGAIN12345,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇸🇬SG-Azure = custom, wuxi.1999.ssrvpn.tech,37760,chacha20-ietf,BARGAIN12345.info,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇯🇵JP-Vultr = custom, 45.32.45.165,33012,chacha20-ietf,BARGAIN12345,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇺🇸US-QN = custom, 107.172.145.151,33273,chacha20-ietf,BARGAIN12345,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇬🇧UK-HN = custom, 185.120.34.3,39656,chacha20-ietf,BARGAIN12345,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+🇺🇸US-ST = custom, 104.160.185.152,25802,rc4-md5,Awuldis,http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+
+
+[Proxy Group]
+☁️ PROXY = select,🌍 DIRECT,🏃 AUTO,🇭🇰HK-Azure,🇸🇬SG-Azure,🇯🇵JP-Vultr,🇺🇸US-QN,🇬🇧UK-HN,🇺🇸US-ST
+
+🔰 PROXY = select,🌍 DIRECT,☁️ PROXY
+
+🍎 PROXY = select,🌍 DIRECT,🇺🇸US-ST
+
+🏃 AUTO = url-test,🇭🇰HK-Azure,🇸🇬SG-Azure,🇯🇵JP-Vultr,🇺🇸US-QN,🇬🇧UK-HN,🇺🇸US-ST,url = http://www.gstatic.com/generate_204,interval = 1200
+
+[Rule]
+// Custom
+
+
+
+# Apple
+
+DOMAIN-SUFFIX,appsto.re,🍎 PROXY
+
+URL-REGEX,apple.com/cn,🍎 PROXY
+
+DOMAIN,appleid.apple.com,🍎 PROXY
+DOMAIN,appleiphonecell.com,🍎 PROXY
+DOMAIN,captive.apple.com,🍎 PROXY
+DOMAIN,configuration.apple.com,🍎 PROXY
+DOMAIN,guzzoni.apple.com,🍎 PROXY
+DOMAIN,idmsa.apple.com,🍎 PROXY
+DOMAIN,images.apple.com,🍎 PROXY
+DOMAIN,init.itunes.apple.com,🍎 PROXY
+DOMAIN,iosapps.itunes.apple.com,🍎 PROXY
+DOMAIN,itsliveradio.apple.com,🍎 PROXY
+DOMAIN,metrics.apple.com,🍎 PROXY
+DOMAIN,osxapps.itunes.apple.com,🍎 PROXY
+DOMAIN,smp-device-content.apple.com,🍎 PROXY
+DOMAIN,support.apple.com,🍎 PROXY
+DOMAIN,swcdn.apple.com,🍎 PROXY
+DOMAIN,swdist.apple.com,🍎 PROXY
+DOMAIN,swdownload.apple.com,🍎 PROXY
+DOMAIN,swquery.apple.com,🍎 PROXY
+DOMAIN,swscan.apple.com,🍎 PROXY
+DOMAIN-SUFFIX,aaplimg.com,🍎 PROXY
+DOMAIN-SUFFIX,akadns.net,🍎 PROXY
+DOMAIN-SUFFIX,apple.co,🍎 PROXY
+DOMAIN-SUFFIX,apple.com,🍎 PROXY
+DOMAIN-SUFFIX,cdn-apple.com,🍎 PROXY
+DOMAIN-SUFFIX,ess.apple.com,🍎 PROXY
+DOMAIN-SUFFIX,icloud.com,🍎 PROXY
+DOMAIN-SUFFIX,icloud-content.com,🍎 PROXY
+DOMAIN-SUFFIX,itunes.apple.com,🍎 PROXY
+DOMAIN-SUFFIX,itunes.com,🍎 PROXY
+DOMAIN-SUFFIX,lookup-api.apple.com,🍎 PROXY
+DOMAIN-SUFFIX,ls.apple.com,🍎 PROXY
+DOMAIN-SUFFIX,me.com,🍎 PROXY
+DOMAIN-SUFFIX,mzstatic.com,🍎 PROXY
+DOMAIN-SUFFIX,push.apple.com,🍎 PROXY
+DOMAIN-SUFFIX,siri.apple.com,🍎 PROXY
+
+
+
+# Rule_REJECT
+
+
+
+
+// Client
+PROCESS-NAME,Thunder,🔰 PROXY
+
+// UA
+USER-AGENT,%E5%8D%B3%E5%88%BB*,🔰 PROXY
+USER-AGENT,*Vainglory* ,🔰 PROXY
+USER-AGENT,arrowio*,🔰 PROXY
+USER-AGENT,balls*,🔰 PROXY
+USER-AGENT,hide*,🔰 PROXY
+USER-AGENT,MegaWerewolf*,🔰 PROXY
+USER-AGENT,MicroMessenger*,🔰 PROXY
+USER-AGENT,Moke*,🔰 PROXY
+USER-AGENT,osee2unifiedRelease*,🔰 PROXY
+USER-AGENT,QQ*,🔰 PROXY
+USER-AGENT,Spark*,🔰 PROXY
+USER-AGENT,TIM*,🔰 PROXY
+
+
+
+# DIRECT
+
+// Accelerate direct sites
+DOMAIN-KEYWORD,torrent,🔰 PROXY
+
+// Spark
+DOMAIN-SUFFIX,api.amplitude.com,🔰 PROXY
+DOMAIN-SUFFIX,app.smartmailcloud.com,🔰 PROXY
+DOMAIN-SUFFIX,firebaseio.com,🔰 PROXY
+DOMAIN-SUFFIX,gate.hockeyapp.net,🔰 PROXY
+
+DOMAIN-SUFFIX,12306.com,🔰 PROXY
+DOMAIN-SUFFIX,126.net,🔰 PROXY
+DOMAIN-SUFFIX,163.com,🔰 PROXY
+DOMAIN-SUFFIX,360.cn,🔰 PROXY
+DOMAIN-SUFFIX,360.com,🔰 PROXY
+DOMAIN-SUFFIX,360buy.com,🔰 PROXY
+DOMAIN-SUFFIX,360buyimg.com,🔰 PROXY
+DOMAIN-SUFFIX,36kr.com,🔰 PROXY
+DOMAIN-SUFFIX,58.com,🔰 PROXY
+DOMAIN-SUFFIX,abercrombie.com,🔰 PROXY
+DOMAIN-SUFFIX,acfun.tv,🔰 PROXY
+DOMAIN-SUFFIX,acgvideo.com,🔰 PROXY
+DOMAIN-SUFFIX,adobesc.com,🔰 PROXY
+DOMAIN-SUFFIX,air-matters.com,🔰 PROXY
+DOMAIN-SUFFIX,air-matters.io,🔰 PROXY
+DOMAIN-SUFFIX,aixifan.com,🔰 PROXY
+DOMAIN-SUFFIX,alicdn.com,🔰 PROXY
+DOMAIN-SUFFIX,alipay.com,🔰 PROXY
+DOMAIN-SUFFIX,alipayobjects.com,🔰 PROXY
+DOMAIN-SUFFIX,aliyun.com,🔰 PROXY
+DOMAIN-SUFFIX,amap.com,🔰 PROXY
+DOMAIN-SUFFIX,appstore.com,🔰 PROXY
+DOMAIN-SUFFIX,autonavi.com,🔰 PROXY
+DOMAIN-SUFFIX,bababian.com,🔰 PROXY
+DOMAIN-SUFFIX,baidu.com,🔰 PROXY
+DOMAIN-SUFFIX,battle.net,🔰 PROXY
+DOMAIN-SUFFIX,bdimg.com,🔰 PROXY
+DOMAIN-SUFFIX,bdstatic.com,🔰 PROXY
+DOMAIN-SUFFIX,bilibili.com,🔰 PROXY
+DOMAIN-SUFFIX,bing.com,🔰 PROXY
+DOMAIN-SUFFIX,blizzard.com,🔰 PROXY
+DOMAIN-SUFFIX,caiyunapp.com,🔰 PROXY
+DOMAIN-SUFFIX,ccgslb.com,🔰 PROXY
+DOMAIN-SUFFIX,ccgslb.net,🔰 PROXY
+DOMAIN-SUFFIX,chinacache.net,🔰 PROXY
+DOMAIN-SUFFIX,chunbo.com,🔰 PROXY
+DOMAIN-SUFFIX,chunboimg.com,🔰 PROXY
+DOMAIN-SUFFIX,clouddn.com,🔰 PROXY
+DOMAIN-SUFFIX,cmfu.com,🔰 PROXY
+DOMAIN-SUFFIX,cnbeta.com,🔰 PROXY
+DOMAIN-SUFFIX,cnbetacdn.com,🔰 PROXY
+DOMAIN-SUFFIX,culturedcode.com,🔰 PROXY
+DOMAIN-SUFFIX,didialift.com,🔰 PROXY
+DOMAIN-SUFFIX,douban.com,🔰 PROXY
+DOMAIN-SUFFIX,doubanio.com,🔰 PROXY
+DOMAIN-SUFFIX,duokan.com,🔰 PROXY
+DOMAIN-SUFFIX,duoshuo.com,🔰 PROXY
+DOMAIN-SUFFIX,dytt8.net,🔰 PROXY
+DOMAIN-SUFFIX,easou.com,🔰 PROXY
+DOMAIN-SUFFIX,ecitic.com,🔰 PROXY
+DOMAIN-SUFFIX,ecitic.net,🔰 PROXY
+DOMAIN-SUFFIX,eudic.net,🔰 PROXY
+DOMAIN-SUFFIX,ewqcxz.com,🔰 PROXY
+DOMAIN-SUFFIX,feng.com,🔰 PROXY
+DOMAIN-SUFFIX,fir.im,🔰 PROXY
+DOMAIN-SUFFIX,frdic.com,🔰 PROXY
+DOMAIN-SUFFIX,fresh-ideas.cc,🔰 PROXY
+DOMAIN-SUFFIX,geetest.com,🔰 PROXY
+DOMAIN-SUFFIX,godic.net,🔰 PROXY
+DOMAIN-SUFFIX,gtimg.com,🔰 PROXY
+DOMAIN-SUFFIX,haibian.com,🔰 PROXY
+DOMAIN-SUFFIX,haosou.com,🔰 PROXY
+DOMAIN-SUFFIX,hdslb.com,🔰 PROXY
+DOMAIN-SUFFIX,hdslb.net,🔰 PROXY
+DOMAIN-SUFFIX,hollisterco.com,🔰 PROXY
+DOMAIN-SUFFIX,hongxiu.com,🔰 PROXY
+DOMAIN-SUFFIX,hxcdn.net,🔰 PROXY
+DOMAIN-SUFFIX,iciba.com,🔰 PROXY
+DOMAIN-SUFFIX,ifeng.com,🔰 PROXY
+DOMAIN-SUFFIX,ifengimg.com,🔰 PROXY
+DOMAIN-SUFFIX,images-amazon.com,🔰 PROXY
+DOMAIN-SUFFIX,ipip.net,🔰 PROXY
+DOMAIN-SUFFIX,iqiyi.com,🔰 PROXY
+DOMAIN-SUFFIX,ithome.com,🔰 PROXY
+DOMAIN-SUFFIX,ixdzs.com,🔰 PROXY
+DOMAIN-SUFFIX,jd.com,🔰 PROXY
+DOMAIN-SUFFIX,jianshu.com,🔰 PROXY
+DOMAIN-SUFFIX,jianshu.io,🔰 PROXY
+DOMAIN-SUFFIX,jianshuapi.com,🔰 PROXY
+DOMAIN-SUFFIX,jiathis.com,🔰 PROXY
+DOMAIN-SUFFIX,jomodns.com,🔰 PROXY
+DOMAIN-SUFFIX,knewone.com,🔰 PROXY
+DOMAIN-SUFFIX,lecloud.com,🔰 PROXY
+DOMAIN-SUFFIX,lemicp.com,🔰 PROXY
+DOMAIN-SUFFIX,letv.com,🔰 PROXY
+DOMAIN-SUFFIX,letvcloud.com,🔰 PROXY
+DOMAIN-SUFFIX,lucifr.com,🔰 PROXY
+DOMAIN-SUFFIX,luoo.net,🔰 PROXY
+DOMAIN-SUFFIX,lxdns.com,🔰 PROXY
+DOMAIN-SUFFIX,mi.com,🔰 PROXY
+DOMAIN-SUFFIX,miaopai.com,🔰 PROXY
+DOMAIN-SUFFIX,miui.com,🔰 PROXY
+DOMAIN-SUFFIX,miwifi.com,🔰 PROXY
+DOMAIN-SUFFIX,mob.com,🔰 PROXY
+DOMAIN-SUFFIX,moke.com,🔰 PROXY
+DOMAIN-SUFFIX,myqcloud.com,🔰 PROXY
+DOMAIN-SUFFIX,myunlu.com,🔰 PROXY
+DOMAIN-SUFFIX,netease.com,🔰 PROXY
+DOMAIN-SUFFIX,nuomi.com,🔰 PROXY
+DOMAIN-SUFFIX,ourdvs.com,🔰 PROXY
+DOMAIN-SUFFIX,overcast.fm,🔰 PROXY
+DOMAIN-SUFFIX,pixiv.net,🔰 PROXY
+DOMAIN-SUFFIX,pstatp.com,🔰 PROXY
+DOMAIN-SUFFIX,qbox.me,🔰 PROXY
+DOMAIN-SUFFIX,qcloud.com,🔰 PROXY
+DOMAIN-SUFFIX,qdaily.com,🔰 PROXY
+DOMAIN-SUFFIX,qdmm.com,🔰 PROXY
+DOMAIN-SUFFIX,qhimg.com,🔰 PROXY
+DOMAIN-SUFFIX,qidian.com,🔰 PROXY
+DOMAIN-SUFFIX,qihucdn.com,🔰 PROXY
+DOMAIN-SUFFIX,qin.io,🔰 PROXY
+DOMAIN-SUFFIX,qingmang.me,🔰 PROXY
+DOMAIN-SUFFIX,qingmang.mobi,🔰 PROXY
+DOMAIN-SUFFIX,qiniucdn.com,🔰 PROXY
+DOMAIN-SUFFIX,qiniudn.com,🔰 PROXY
+DOMAIN-SUFFIX,qiyi.com,🔰 PROXY
+DOMAIN-SUFFIX,qiyipic.com,🔰 PROXY
+DOMAIN-SUFFIX,qq.com,🔰 PROXY
+DOMAIN-SUFFIX,qqurl.com,🔰 PROXY
+DOMAIN-SUFFIX,rarbg.to,🔰 PROXY
+DOMAIN-SUFFIX,rrmj.tv,🔰 PROXY
+DOMAIN-SUFFIX,ruguoapp.com,🔰 PROXY
+DOMAIN-SUFFIX,sandai.net,🔰 PROXY
+DOMAIN-SUFFIX,sinaapp.com,🔰 PROXY
+DOMAIN-SUFFIX,sinaimg.com,🔰 PROXY
+DOMAIN-SUFFIX,smzdm.com,🔰 PROXY
+DOMAIN-SUFFIX,snwx.com,🔰 PROXY
+DOMAIN-SUFFIX,so.com,🔰 PROXY
+DOMAIN-SUFFIX,sogou.com,🔰 PROXY
+DOMAIN-SUFFIX,sogoucdn.com,🔰 PROXY
+DOMAIN-SUFFIX,sohu.com,🔰 PROXY
+DOMAIN-SUFFIX,soku.com,🔰 PROXY
+DOMAIN-SUFFIX,soso.com,🔰 PROXY
+DOMAIN-SUFFIX,sspai.com,🔰 PROXY
+DOMAIN-SUFFIX,startssl.com,🔰 PROXY
+DOMAIN-SUFFIX,suning.com,🔰 PROXY
+DOMAIN-SUFFIX,taobao.com,🔰 PROXY
+DOMAIN-SUFFIX,tenpay.com,🔰 PROXY
+DOMAIN-SUFFIX,tietuku.com,🔰 PROXY
+DOMAIN-SUFFIX,tmall.com,🔰 PROXY
+DOMAIN-SUFFIX,tudou.com,🔰 PROXY
+DOMAIN-SUFFIX,udache.com,🔰 PROXY
+DOMAIN-SUFFIX,upaiyun.com,🔰 PROXY
+DOMAIN-SUFFIX,upyun.com,🔰 PROXY
+DOMAIN-SUFFIX,uxengine.net,🔰 PROXY
+DOMAIN-SUFFIX,wandoujia.com,🔰 PROXY
+DOMAIN-SUFFIX,weather.com,🔰 PROXY
+DOMAIN-SUFFIX,weibo.com,🔰 PROXY
+DOMAIN-SUFFIX,weico.cc,🔰 PROXY
+DOMAIN-SUFFIX,weiphone.com,🔰 PROXY
+DOMAIN-SUFFIX,weiphone.net,🔰 PROXY
+DOMAIN-SUFFIX,windowsupdate.com,🔰 PROXY
+DOMAIN-SUFFIX,workflow.is,🔰 PROXY
+DOMAIN-SUFFIX,workflowy.com,🔰 PROXY
+DOMAIN-SUFFIX,xdrig.com,🔰 PROXY
+DOMAIN-SUFFIX,xiami.com,🔰 PROXY
+DOMAIN-SUFFIX,xiami.net,🔰 PROXY
+DOMAIN-SUFFIX,xiaojukeji.com,🔰 PROXY
+DOMAIN-SUFFIX,xiaomi.com,🔰 PROXY
+DOMAIN-SUFFIX,xiaomi.net,🔰 PROXY
+DOMAIN-SUFFIX,xiaomicp.com,🔰 PROXY
+DOMAIN-SUFFIX,ximalaya.com,🔰 PROXY
+DOMAIN-SUFFIX,xitek.com,🔰 PROXY
+DOMAIN-SUFFIX,xmcdn.com,🔰 PROXY
+DOMAIN-SUFFIX,xn--h5qz41fzgdxxl.com,🔰 PROXY
+DOMAIN-SUFFIX,xslb.net,🔰 PROXY
+DOMAIN-SUFFIX,xunlei.com,🔰 PROXY
+DOMAIN-SUFFIX,yach.me,🔰 PROXY
+DOMAIN-SUFFIX,yeepay.com,🔰 PROXY
+DOMAIN-SUFFIX,yhd.com,🔰 PROXY
+DOMAIN-SUFFIX,yinxiang.com,🔰 PROXY
+DOMAIN-SUFFIX,yixia.com,🔰 PROXY
+DOMAIN-SUFFIX,ykimg.com,🔰 PROXY
+DOMAIN-SUFFIX,youdao.com,🔰 PROXY
+DOMAIN-SUFFIX,youku.com,🔰 PROXY
+DOMAIN-SUFFIX,yunjiasu-cdn.net,🔰 PROXY
+DOMAIN-SUFFIX,zealer.com,🔰 PROXY
+DOMAIN-SUFFIX,zgslb.net,🔰 PROXY
+DOMAIN-SUFFIX,zhihu.com,🔰 PROXY
+DOMAIN-SUFFIX,zhimg.com,🔰 PROXY
+DOMAIN-SUFFIX,zimuzu.tv,🔰 PROXY
+
+
+
+# DIRECT
+
+
+
+DOMAIN-SUFFIX,cn,🔰 PROXY
+
+// LAN,debugging rules should place above this line
+IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,100.64.0.0/10,DIRECT
+IP-CIDR,127.0.0.0/8,DIRECT
+IP-CIDR,172.0.0.0/8,DIRECT
+IP-CIDR,192.168.0.0/16,DIRECT
+
+// Detect local network
+GEOIP,CN,🔰 PROXY
+// Use Proxy for all others
+FINAL,☁️ PROXY
+
+[Host]
+// Host
+localhost = 127.0.0.1
+syria.sy = 127.0.0.1
+
+thisisinsider.com = server:8.8.4.4
+
+onedrive.live.com = 204.79.197.217
+skyapi.onedrive.live.com = 131.253.14.230
+
+[URL Rewrite]
+
+// Google_Service_HTTPS_Jump
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+
+// Anti_ISP_JavaScript_Injection
+^https?://101.251.211.235 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://103.249.254.113 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://106.75.65.92 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://120.132.57.41 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://120.132.63.203 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://120.26.151.246 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://120.55.199.139 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://120.76.189.132 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://122.226.223.163 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://139.196.239.52 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://180.76.155.58 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://183.131.79.30 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://211.155.94.198 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://223.6.255.99 https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://c.minisplat.cn/ https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://c1.minisplat.cn/ https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://cache.changjingyi.cn/ https://async.be/Interface?AuthKey=[AUTHKEY]& header
+^https?://cache.gclick.cn/ https://async.be/Interface?AuthKey=[AUTHKEY]& header
+
+// Anti_ISP_Safari_Baidu_CPM_Hijack
+^https?://m.coolaiy.com/b.php https://async.be/Interface?AuthKey=[AUTHKEY]& 302
+^https?://www.babyye.com/b.php https://async.be/Interface?AuthKey=[AUTHKEY]& 302
+^https?://www.gwv7.com/b.php https://async.be/Interface?AuthKey=[AUTHKEY]& 302
+^https?://www.likeji.net/b.php https://async.be/Interface?AuthKey=[AUTHKEY]& 302
+
+// Anti_ISP_JD_Hijack
+^https?://coupon.m.jd.com/ https://coupon.m.jd.com/ 302
+^https?://h5.m.jd.com/ https://h5.m.jd.com/ 302
+^https?://item.m.jd.com/ https://item.m.jd.com/ 302
+^https?://m.jd.com https://m.jd.com 302
+^https?://newcz.m.jd.com/ https://newcz.m.jd.com/ 302
+^https?://p.m.jd.com/ https://p.m.jd.com/ 302
+^https?://so.m.jd.com/ https://so.m.jd.com/ 302
+^https?://union.click.jd.com/jda? http://union.click.jd.com/jda?adblock= header
+^https?://union.click.jd.com/sem.php? http://union.click.jd.com/sem.php?adblock= header
+
+// Anti_ISP_Taobao_Hijack
+^https?://m.taobao.com/ https://m.taobao.com/ 302
+
+// Feng
+^https?://push.feng.com/resource/photo/appimg/launchimage - reject
+^https?://yes1.feng.com/images http://ogtre5vp0.bkt.clouddn.com/background.png? header
+^https?://yes1.feng.com/view.php http://ogtre5vp0.bkt.clouddn.com/background.png? header
+
+// Tencent
+^https?://imgcache.qq.com/qqlive/ - reject
+^https?://mi.gdt.qq.com\/gdt_mview.fcg\?posid=.* - reject
+^https?://mp.weixin.qq.com/mp/report - reject
+^https?://news.l.qq.com\/app\?.* - reject
+^https?://r.inews.qq.com/adsBlacklist - reject
+^https?://r.inews.qq.com/getBannerAds - reject
+^https?://r.inews.qq.com/getFullScreenPic - reject
+^https?://r.inews.qq.com/getNewsRemoteConfig - reject
+^https?://r.inews.qq.com/getSplash\?apptype=ios\&startarticleid=\&__qnr=.* - reject
+^https?://r.inews.qq.com/searchHotCatList - reject
+^https?://r.inews.qq.com/upLoadLoc - reject
+
+// Moji
+^https?://ad.api.moji.com/ad/log/stat - reject
+^https?://ast.api.moji.com/assist/ad/moji/stat - reject
+^https?://cdn.moji.com/adlink/avatarcard - reject
+^https?://cdn.moji.com/adlink/common - reject
+^https?://cdn.moji.com/adlink/splash/ - reject
+^https?://cdn.moji.com/advert/ - reject
+^https?://cdn2.moji002.com/webpush/ad2/ - reject
+^https?://fds.api.moji.com/card/recommend - reject
+^https?://show.api.moji.com/json/showcase/getAll - reject
+^https?://stat.moji.com - reject
+^https?://storage.360buyimg.com/kepler-app - reject
+^https?://ugc.moji001.com/sns/json/profile/get_unread - reject
+
+// Youku
+^https?://ad.api.3g.youku.com - reject
+^https?://api.appsdk.soku.com/bg/r - reject
+^https?://api.appsdk.soku.com/tag/r - reject
+^https?://api.k.sohu.com/api/channel/ad/ - reject
+^https?://api.mobile.youku.com/adv/ - reject
+^https?://api.mobile.youku.com/layout/search/hot/word - reject
+^https?://hd.api.mobile.youku.com/common/v3/hudong/new - reject
+^https?://hd.mobile.youku.com/common/v3/hudong/new - reject
+^https?://i.gtimg.cn/ https://i.gtimg.cn/ 302
+^https?://m.youku.com/video/libs/iwt.js - reject
+^https?://pic.k.sohu.com/img8/wb/tj/ - reject
+^https?://pl.youku.com - reject
+^https?://r.l.youku.com/rec_at_click - reject
+^https?://r1.ykimg.com/\w{30,35}.jpg - reject
+^https?://r1.ykimg.com/material/.*/\d{4}-\d{4}.* - reject
+^https?://api.mobile.youku.com/initial? https://async.be/Interface?AuthKey=[AUTHKEY]&dev=true& 302
+^https?://d.m6.cms.mobile.youku.com/player/domain_name? https://async.be/Interface?AuthKey=[AUTHKEY]&dev=true& header
+^https?://home.mobile.youku.com/layout/iphone/v5/home/page? https://async.be/Interface?AuthKey=[AUTHKEY]&dev=true& header
+^https?://i-play.mobile.youku.com/common/v5/play? https://async.be/Interface?AuthKey=[AUTHKEY]&dev=true& header
+^https?://ups.youku.com/ups/get.json? https://async.be/Interface?AuthKey=[AUTHKEY]&dev=true& 302
+
+// ZhuiShu
+^https?://api.zhuishushenqi.com/advert - reject
+^https?://api.zhuishushenqi.com/notification/shelfMessage - reject
+^https?://api.zhuishushenqi.com/recommend - reject
+^https?://api.zhuishushenqi.com/splashes/ios - reject
+^https?://mi.gdt.qq.com/gdt_mview.fcg - reject
+
+// IQIYI
+^https?://.*/videos/other/.*\.f4v - reject
+^https?://iface.iqiyi.com/api/getNewAdInfo? - reject
+^https?://iface2.iqiyi.com/views_pop/3.0/pop_control? - reject
+^https?://iface2.iqiyi.com/views_pop/3.0/pop_home? - reject
+
+// ChinaRailcom
+^https?://211.98.70.226:8080/ https://async.be/Interface?AuthKey=[AUTHKEY]& 302
+^https?://211.98.71.195:8080/ https://async.be/Interface?AuthKey=[AUTHKEY]& 302
+^https?://211.98.71.196:8080/ https://async.be/Interface?AuthKey=[AUTHKEY]& 302
+
+// Sohu
+^https?://agn.aty.sohu.com/m? - reject
+^https?://api.tv.sohu.com/mobile/control/switch.json? - reject
+^https?://api.tv.sohu.com/mobile_user/device/clientconf.json? - reject
+^https?://api.tv.sohu.com/mobile_user/push/uploadtoken.json? - reject
+^https?://api.tv.sohu.com/v4/mobile/albumdetail.json? - reject
+^https?://api.tv.sohu.com/v4/mobile/albumdetail.json\?poid=.* - reject
+^https?://api.tv.sohu.com/v4/mobile/control/switch.json? - reject
+^https?://hui.sohu.com/predownload2/? - reject
+^https?://m.aty.sohu.com/openload? - reject
+^https?://mbl.56.com/config/v1/common/config.union.ios.do? - reject
+^https?://mmg.aty.sohu.com/mqs? - reject
+^https?://mmg.aty.sohu.com/pvlog? - reject
+^https?://photocdn.sohu.com/tvmobilemvms - reject
+^https?://s.go.sohu.com\/adgtr\/\?gbcode=\&appchn=.* - reject
+^https?://s1.api.tv.itc.cn/v4/mobile/feeling/list.json? - reject
+^https?://s1.api.tv.itc.cn/v4/mobile/searchFunctionConfig/list.json? - reject
+
+// Zhihu
+^https?://api.zhihu.com/.*1242.*2208.* - reject
+^https?://api.zhihu.com/carousel? - reject
+^https?://www.zhihu.com/api/v4/banners/mobile_banner - reject
+^https?://www.zhihu.com/api/v4/banners/mobile_question_cpd - reject
+^https?://www.zhihu.com/node/Banner? - reject
+
+// Baidu Wenku
+^https?://wapwenku.baidu.com/view/fengchao/ - reject
+^https?://wapwenku.baidu.com/view/fengchaoTwojump/ - reject
+^https?://wenku.baidu.com/shifen/ - reject
+
+// baidu
+(ps|sv|offnavi|newvector|ulog\.imap|newloc)(\.map)?\.(baidu|n\.shifen)\.com - reject
+^https?://als.baidu.com/clog/clog - reject
+^https?://baichuan.baidu.com/rs/adpmobile/launch.* - reject
+^https?://c.tieba.baidu.com/c/p/img\?src= - reject
+^https?://c.tieba.baidu.com/c/s/logtogether\?cmd=.* - reject
+^https?://fanyi-app.baidu.com/transapp/agent.php http://async.be/Interface?AuthKey=[AUTHKEY]& 302
+^https?://gss0.bdstatic.com/5bd1bjqh_Q23odCf/static/wiseindex/img/bd_red_packet.png - reject
+^https?://imgsrc.baidu.com\/forum\/pic\/item/.* - reject
+^https?://ss\d{1}.baidu.com/.*&w=218&h=146&img.* - reject
+^https?://ss\d{1}.bdstatic.com/.*\d{3}_\d{3}.* - reject
+^https?://tb1.bdstatic.com/tb/cms/ngmis/adsense/*.jpg - reject
+
+// 360
+(.+\.|^)(360|so|qihoo|360safe|qhimg|360totalsecurity|yunpan)\.(cn|com) - reject
+
+// 10086
+^.*/gmccapp/file/image/preloading/preloading\d{17}.jpg - reject
+^https?://app.10086.cn/group.* - reject
+
+// 10000
+^https?://image1.chinatelecom-ec.com/images/.*/\d{13}.jpg - reject
+
+// 10010
+^https?://m.client.10010.com/mobileService/activity/get_client_adv.* - reject
+^https?://m.client.10010.com/mobileService/activity/get_startadv.* - reject
+^https?://res.mall.10010.cn/mall/common/js/fa.js?referer=.* - reject
+
+// ifeng
+^https?://api.newad.ifeng.com\/ClientAdversApi1508\?adids=.* - reject
+^https?://exp.3g.ifeng.com\/coverAdversApi\?gv=. - reject
+^https?://ifengad.3g.ifeng.com\/ad\/pv.php\?stat=.* - reject
+^https?://iis1.deliver.ifeng.com\/getmcode\?adid=.* - reject
+
+// 163
+^https?://mimg.127.net/external/smartpop-manger.min.js - reject
+
+// 163 Music
+^https?://.*?/eapi/ad/.* - reject
+^https?://163.com/madr?app=\b.*platform=\b.*uid.* - reject
+
+// JD
+^https?://m.360buyimg.com/mobilecms/s640x1136_jfs/.* - reject
+
+// Taobao
+^https?://gw.alicdn.com/tfs/.*-1125-1602.* - reject
+
+// Douban
+^https?://api.douban.com/v2/app_ads.* - reject
+^https?://erebor.douban.com/.*?&ad_id=.* - reject
+^https?://img3.doubanio.com\/f\/talion\/.*?\/pics\/card\/bottom_ad.png - reject
+^https?://img3.doubanio.com\/f\/talion\/.*?\/pics\/card\/bottom_ad_close.png - reject
+^https?://img3.doubanio.com/view/dale-online/dale_ad.* - reject
+
+// Douyu
+^https?://capi.douyucdn.cn/lapi/sign/appapi/getinfo.* - reject
+^https?://capi.douyucdn.cn/api/v1/getStartSend.* - reject
+^https?://douyucdn.cn/.*/appapi/getinfo.* - reject
+^https?://staticlive.douyucdn.cn/.*/getStartSend.* - reject
+^https?://staticlive.douyucdn.cn/upload/signs/ - reject
+
+// ele
+^https?://elemecdn\.com\/.*\/sitemap.* - reject
+^https?://m.elecfans.com/static/js/ad.js - reject
+^https?://www1.elecfans.com/www/delivery/ - reject
+
+// ios.win007
+^https?://ios.win007.com/Phone/images - reject
+
+// letv
+^https?://ark.letv.com\/adx\?adzone=.+ - reject
+^https?://ark.letv.com\/t\?mid=\d{7}$ - reject
+
+// Toutiao
+^https?://p\d{1}.pstatp.com/origin - reject
+^https?://pb\d{1}.pstatp.com/origin - reject
+
+// Weibo
+^https?://d\d{1}.sina.com.cn - reject
+^https?://sdkapp.mobile.sina.cn/interface/sdk/actionad.php - reject
+^https?://sdkapp.mobile.sina.cn/interface/sdk/sdkad.php - reject
+^https?://simg.s.weibo.com/.*_ios\d{2}.gif - reject
+^https?://u\d{1}.img.mobile.sina.cn/public/files/image/\d{3}x\d{3} - reject
+^https?://wbapp.mobile.sina.cn/interface/f/ttt/v3/freshguidad.php - reject
+^https?://wbapp.mobile.sina.cn/interface/win/winad.php - reject
+^https?://wbapp.mobile.sina.cn\/wbapplua\/wbpullad.lua\?wm=.* - reject
+
+// Wiki
+^https?://.*.(m.)?wikipedia.org/wiki http://www.wikiwand.com/en 302
+^https?://zh.(m.)?wikipedia.org/(zh-hans|zh-sg|zh-cn|zh(?=/)) http://www.wikiwand.com/zh 302
+^https?://zh.(m.)?wikipedia.org/zh-[a-zA-Z]{2,} http://www.wikiwand.com/zh-hant 302
+
+// Xianyu
+^https?://gw.alicdn.com/mt/.* - reject
+^https?://gw.alicdn.com/tfs/.*\d{3,4}-\d{4}.* - reject
+^https?://gw.alicdn.com/tps/.*\d{3,4}-\d{4}.* - reject
+
+// Ximalaya
+^https?://adse.*\.com\/[a-z]{4}\/loading\?appid=.* - reject
+^https?://adse.ximalaya.com\/ting\/feed\?appid=.* - reject
+^https?://adse.ximalaya.com\/ting\/loading\?appid=.* - reject
+^https?://adse.ximalaya.com\/ting\?appid=.* - reject
+^https?://fdfs.xmcdn.com/group21/M03/E7/3F/ - reject
+^https?://fdfs.xmcdn.com/group21/M0A/95/3B/ - reject
+^https?://fdfs.xmcdn.com/group22/M00/92/FF/ - reject
+^https?://fdfs.xmcdn.com/group22/M05/66/67/ - reject
+^https?://fdfs.xmcdn.com/group22/M07/76/54/ - reject
+^https?://fdfs.xmcdn.com/group23/M01/63/F1/ - reject
+^https?://fdfs.xmcdn.com/group23/M04/E5/F6/ - reject
+^https?://fdfs.xmcdn.com/group23/M07/81/F6/ - reject
+^https?://fdfs.xmcdn.com/group23/M0A/75/AA/ - reject
+^https?://fdfs.xmcdn.com/group24/M03/E6/09/ - reject
+^https?://fdfs.xmcdn.com/group24/M07/C4/3D/ - reject
+^https?://fdfs.xmcdn.com/group25/M05/92/D1/ - reject
+
+// Zhangyue
+^https?://book.img.ireader.com/group6/M00 - reject
+
+// Youdao
+^https?://gorgon.youdao.com\/gorgon\/request\.s\?v=.* - reject
+^https?://impservice.youdao.com\/imp\/request\.s\?req=.* - reject
+^https?://oimagea4.ydstatic.com/image?id= - reject
+^https?://oimageb8.ydstatic.com/image?id= - reject
+
+// Yiche
+^https?://api.ycapp.yiche.com/appnews/getadlist - reject
+^https?://api.ycapp.yiche.com/yicheapp/getadlist - reject
+^https?://api.ycapp.yiche.com/yicheapp/getappads/ - reject
+^https?://cheyouapi.ycapp.yiche.com/appforum/getusermessagecount - reject
+
+// Youtube
+^https?://m.youtube.com/_get_ads - reject
+^https?://pagead2.googlesyndication.com/pagead/ - reject
+^https?://s0.2mdn.net/ads/ - reject
+^https?://stats.tubemogul.com/stats/ - reject
+
+// 0013
+^https?://.*0013.*/upload/activity/app_flash_screen_.* - reject
+
+// Tianshan live
+^http?://www.tsytv.com.cn/api/app/ios/ads - reject
+
+// KFC
+^https?://res.kfc.com.cn/advertisement/.* - reject
+
+// Zhaoshang cbb
+^https?://pic1cdn.cmbchina.com/appinitads/.* - reject
+
+// Shouyue auto
+^https?://img.yun.01zhuanche.com/statics/app/advertisement/.*-750-1334.* - reject
+
+// Shenzhou auto
+^https?://img01.10101111cdn.com/adpos/share/.* - reject
+
+// Flow cbb
+^https?://bank.wo.cn/v9/getstartpage.* - reject
+
+// Haiyan
+^https?://img.ihytv.com/material/adv/img/.* - reject
+
+// Meituan Waimai
+^https?://p\d{1}.meituan.net/wmbanner/.* - reject
+
+// QQPim
+^https?://mmgr.gtimg.com/gjsmall/qqpim/public/ios/splash/.*/\d{4}_\d{4}.* - reject
+
+// JiemianNews
+^https?://img.jiemian.com/ads/.* - reject
+
+// Auto home
+^https?://119.6.225.56/advert_.*/ad/.* - reject
+^https?://183.57.73.130/advert_.*/ad/.* - reject
+^https?://app2.autoimg.cn/appdfs/.* - reject
+^https?://img2.autoimg.cn/admdfs/.* - reject
+
+// Qidiandushu
+^https?://mage.if.qidian.com/Atom.axd/Api/Client/GetConfIOS - reject
+
+// Cmblife
+^https?://mlife.cmbchina.com/ClientFace/preCacheAdvertise.json - reject
+
+// DangDang
+^https?://img\d{2}.ddimg.cn/upload_img/.*/670x900.* - reject
+^https?://img\d{2}.ddimg.cn/upload_img/.*/750x1064.* - reject
+^https?://mapi.dangdang.com/index.php\?action=init&user_client=iphone.* - reject
+
+// Dnvod
+^https?://m.dnvod.tv http://m.dnvod.tv/\?mobile=true header
+^https?://www.dnvod.tv/Ads/250.htm\?r= http://m.dnvod.tv/?mobile=true header
+^https?://static.dnvod.tv/upload/doing - reject
+^https?://static.dnvod.tv/upload/gaming - reject
+^https?://www.dnvod.tv/images/LoadTest - reject
+^https?://www.dnvod.tv/upload/gaming - reject
+
+// Guotai
+^https?://dl.app.gtja.com/operation/config/startupConfig.json - reject
+
+// Laifeng Live
+^https?://api.laifeng.com/v1/start/ads.* - reject
+
+// Douyin
+^https?://aweme.snssdk.com/aweme/v1/screen/ad/.* - reject
+
+// Xiachufang
+^https?://api.xiachufang.com/v2/ad/.* - reject
+
+// AVnight
+^https?://cdn.oneway.mobi/advertiser/.* - reject
+
+// Facebook
+^https?://connect.facebook.net/en_US/fbadnw.js - reject
+
+// Kuaidi100
+^https?://qzonestyle.gtimg.cn/qzone/biz/gdt/mob/sdk/ios/v2/.* - reject
+^https?://cdn.kuaidi100.com/images/open/appads - reject
+^https?://p.kuaidi100.com/mobile/mainapi.do - reject
+
+// MiFit
+^https?://hm.xiaomi.com/.*/app/startpages.json - reject
+^https?://hm.xiaomi.com/.*/soc/well/list/community.* - reject
+^https?://hm.xiaomi.com/discovery/mi/discovery/homepage_ad.* - reject
+^https?://hm.xiaomi.com/discovery/mi/discovery/sport_ad.* - reject
+
+// Weico
+^https?://.*/portal.php\?a=get_ads.* - reject
+^https?://.*/portal.php\?c=duiba.* - reject
+^https?://.*/portal.php\?a=get_coopen_ads.* - reject
+^https?://weicoapi.weico.cc/img/ad/.* - reject
+^https?://.*/weico4ad/ad/.* - reject
+
+// StarFans
+^https?://g.cdn.pengpengla.com/starfantuan/boot-screen-info/.* - reject
+
+// Discuz
+^https?://discuz.gtimg.cn/cloud/scripts/discuz_tips.js - reject
+
+// Guopan
+^https?://sapi.guopan.cn/get_buildin_ad - reject
+
+// V2EX
+^https?://i.v2ex.co/\w{8}\.gif data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAFAAAAAABAQMAAADUNoq9AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUKM9jGAWjYCABAAKBAAHSiCmVAAAAAElFTkSuQmCC 302
+^https?://cdn.v2ex.co/assets/sidebar/.* data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAFAAAAAABAQMAAADUNoq9AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUKM9jGAWjYCABAAKBAAHSiCmVAAAAAElFTkSuQmCC 302
+^https?://v2ex.assets.uxengine.net/assets/sidebar/.* data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAFAAAAAABAQMAAADUNoq9AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAA5JREFUKM9jGAWjYCABAAKBAAHSiCmVAAAAAElFTkSuQmCC 302
+
+// Jiakaobaodian
+^https?://789.kakamobi.cn/.*adver.* - reject
+^https?://smart.789.image.mucang.cn/advert.* - reject
+
+
+
+// Other
+^.*/ad(s|v)?.js - reject
+^.*/allOne.php\?ad_name=main_splash_ios - reject
+^.*\?resource=article\/recommend\&accessToken=.* - reject
+^.*nga\.cn.*\bhome.*\b=ad.* - reject
+^https?://.*/allOne.php\?ad_name=main_splash_ios - reject
+^https?://\?resource=article\/recommend\&accessToken=. - reject
+^https?://cfg.m.ttkvod.com/mobile/ttk_mobile_1.8.txt http://ogtre5vp0.bkt.clouddn.com/Static/TXT/ttk_mobile_1.8.txt header
+^https?://cnzz.com/ http://ogtre5vp0.bkt.clouddn.com/background.png? header
+^https?://creatives.ftimg.net/ads/.* - reject
+^https?://dd.iask.cn/ddd/adAudit - reject
+^https?://g.tbcdn.cn/mtb/ - reject
+^https?://gorgon.youdao.com\/gorgon\/request\.s\?v=.* - reject
+^https?://huichuan.sm.cn/jsad? - reject
+^https?://impservice.youdao.com\/imp\/request\.s\?req=.* - reject
+^https?://iphone265g.com/templates/iphone/bottomAd.js - reject
+^https?://issuecdn.baidupcs.com/issue/netdisk/guanggao/ http://ogtre5vp0.bkt.clouddn.com/background.png? header
+^https?://m.+.china.com.cn/statics/sdmobile/js/ad - reject
+^https?://m.+.china.com.cn/statics/sdmobile/js/mobile.advert.js - reject
+^https?://m.+.china.com.cn/statics/sdmobile/js/mobileshare.js - reject
+^https?://m.elecfans.com/static/js/ad.js - reject
+^https?://m.qu.la/stylewap/js/wap.js http://ogtre5vp0.bkt.clouddn.com/qu_la_wap.js 302
+^https?://m.yhd.com/1/? http://m.yhd.com/1/?adbock= 302
+^https?://mi.gdt.qq.com\/gdt_mview.fcg\?posid=.* - reject 
+^https?://n.mark.letv.com/m3u8api/ http://burpsuite.applinzi.com/Interface header
+^https?://nga\.cn.*\bhome.*\b=ad.* - reject
+^https?://player.hoge.cn/advertisement.swf - reject
+^https?://ress.dxpmedia.com/appicast/ - reject
+^https?://s1.api.tv.itc.cn/v4/mobile/feeling/list.json\?api_key=.* - reject
+^https?://s3.pstatp.com/inapp/TTAdblock.css - reject
+^https?://sqimg.qq.com/ https://sqimg.qq.com/ 302
+^https?://statc.mytuner.mobi/media/banners/ - reject
+^https?://static.cnbetacdn.com/assets/adv - reject
+^https?://static.iask.cn/m-v20161228/js/common/adAudit.min.js - reject
+^https?://static.m.ttkvod.com/static_cahce/index/index.txt http://ogtre5vp0.bkt.clouddn.com/Static/TXT/index.txt header
+^https?://v.17173.com/api/Allyes/ - reject
+^https?://wmedia-track.uc.cn - reject
+^https?://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fcreatives.ftimg.net%2Fads* - reject
+^https?://www.inoreader.com/adv/.* - reject
+^https?://www.iqshw.com/d/js/m http://burpsuite.applinzi.com/Interface header
+^https?://www.iqshw.com/d/js/m http://rewrite.websocket.site:10/Other/Static/JS/Package.js? header
+^https?://www.lianbijr.com/adPage/.* - reject
+
+[SSID Setting]
+// SSID
+
+[MITM]
+// hostname
+// MITM
