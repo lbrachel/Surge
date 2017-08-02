@@ -5,7 +5,11 @@
 本项目最早是基于 [scomper/surge.conf](https://gist.github.com/scomper/915b04a974f9e11952babfd0bbb241a8) 定制修改而来，现已形成独有风格。
 
 ---
-* [可实现功能](#可实现功能)
+* [已支持应用](#application)
+	* Surge
+	* Shadowrocket
+	* Quantumult
+* [可实现功能](#function)
 * 导入方式
     * [URL_Lite](#url)
     * [Workflow](#workflow)
@@ -15,7 +19,7 @@
 * [证书的安装及信任](#mitm)
 * [Hosts（免服务器翻墙）](#hosts)
 * [Android SSR ACL](#android-ssr-acl)
-* [浏览器广告](#浏览器广告)
+* [浏览器广告](#browser-ad)
 * [联系方式](#line)
 * [Q&A](#qa)
 	* [☁️ Proxy & 🔰 Proxy & 🍎 Proxy](#%EF%B8%8F-proxy---proxy---proxy)
@@ -31,7 +35,17 @@
 
 ---
 
-### 可实现功能
+### Application
+
+Configuration | Source
+----|----
+Surge | [@lhie1](https://t.me/lhie1)
+Shadowrocket | [@lhie1](https://t.me/lhie1)
+Quantumult | [@未名](https://t.me/unknownTokyo)
+
+---
+
+### Function
 * 自动代理 / 全局代理
 * 解决本地 DNS 可能带来的干扰
 * 可突破部分内网限制（公司、学校）
@@ -63,7 +77,7 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
 ````
 导入后请务必[安装证书](#mitm)
 
-![URL](https://raw.githubusercontent.com/lhie1/Surge/master/images/URL.jpeg)
+![](https://raw.githubusercontent.com/lhie1/Surge/master/images/URL.jpeg)
 
 ---
 
@@ -76,6 +90,7 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
     * 自定义添加[Host]规则
     * 自定义添加[URL Rewrite]规则
     * 自定义添加[SSID Setting]规则
+    * 自定义添加 DNS
     * 自定义删除规则（All）
     * 生成证书
     * [Widget 策略](#widget-策略)
@@ -97,18 +112,18 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
     * 生成规则
     * [安装证书](#mitm)
     * [常见问题](#workflow_qa)
----
+
 #### User Data
-[下载地址](https://workflow.is/workflows/7dee8634229d4a48b81d96c8c912d87b)
+[下载地址](https://workflow.is/workflows/4c49ac83c450407aa790a2b56694195d)
 
 #### Rule OTA
-[下载地址](https://workflow.is/workflows/7f1c9a96c51648d990d34aafa2077ff6)
+[下载地址](https://workflow.is/workflows/3149341326274b1d8fd0b583bc3af098)
 
 ---
 
 #### Widget 策略
 
-![Widget](https://raw.githubusercontent.com/lhie1/Surge/master/images/Widget.JPG)
+![](https://raw.githubusercontent.com/lhie1/Surge/master/images/Widget.JPG)
 
 #### Special_Proxy
 * ##### AuthKey
@@ -181,13 +196,13 @@ iOS：
 
 macOS：
 
-![macOS_MitM](https://raw.githubusercontent.com/lhie1/Surge/master/images/macOS_MitM.jpg)
+![](https://raw.githubusercontent.com/lhie1/Surge/master/images/macOS_MitM.jpg)
 
 ---
 
 ### Workflow_Q&A
 
-![Workflow_Q&A](https://raw.githubusercontent.com/lhie1/Surge/master/images/Workflow_Q&A.JPG)
+![](https://raw.githubusercontent.com/lhie1/Surge/master/images/Workflow_Q&A.JPG)
 
 1. 网络连接失败，切换节点或者更换网络环境
 2. 证书效验失败，[检查证书](#mitm)
@@ -208,7 +223,7 @@ macOS：
 
 长时间的维护和分享离不开大家的鼓励与支持，如果帮助到您，可以考虑捐赠，谢谢。
 
-![Pay](https://raw.githubusercontent.com/lhie1/Surge/master/images/Pay.jpeg)
+![](https://raw.githubusercontent.com/lhie1/Surge/master/images/Pay.jpeg)
 
 ---
 
@@ -241,7 +256,7 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl
 ````
 ---
 
-### 浏览器广告
+### Browser ad
 ````
 Adguard：https://adguard.com/en/welcome.html
 ````
@@ -259,7 +274,7 @@ Adguard：https://adguard.com/en/welcome.html
 ☁️ Proxy：管控国外的流量；🌍 Direct - 直连，不可访问外网；代理服务器 - 可访问外网
 
 🔰 Proxy：管控国内的流量；🌍 Direct - 智能分流 (Pac)；☁️ Proxy - 全局代理
- 
+
 🍎 Proxy： 管控苹果的流量；如果苹果某些服务直连困难，设其为代理，可能会改善一些问题：🍎 Proxy - 代理服务器
 
 建议 ： ☁️ Proxy - 代理服务器；🔰 Proxy - 🌍 Direct ；🍎 Proxy - 🌍 Direct/代理服务器
@@ -333,7 +348,7 @@ ShadowsocksR (R)：https://github.com/shadowsocksr/shadowsocksr-csharp/releases
 ````
 
 ---
- 
+
 📋 教程 / 说明：
 ````
 Surge for iOS：https://medium.com/@scomper/surge-配置文件-a1533c10e80b#.9fpdjn34f
@@ -515,8 +530,10 @@ ca-passphrase = password
 * [@Neurogram](http://www.taguage.com/user?id=181456)
 * @suisr9255
 * [@Hackl0us](https://github.com/Hackl0us)
+* [@unknownTokyo](https://t.me/unknownTokyo)
 
 ---
 
 ### License
 * 可以拷贝、转发，但是必须提供原作者信息，同时也不能将本项目用于商业用途。
+
