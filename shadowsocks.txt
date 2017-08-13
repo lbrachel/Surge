@@ -1,14 +1,16 @@
 [Proxy]
 🌍 DIRECT = direct
-🇯🇵JP-Vultr = custom, 45.32.45.165, 33012, chacha20-ietf, BARGAIN12345, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇯🇵JP-Vultr(2) = custom, 45.32.30.212, 1025, rc4-md5, nHHpgf, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇯🇵JP-Vultr(3) = custom, 45.32.53.223, 13409, chacha20-ietf, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇺🇸US-DG = custom, 204.44.81.161, 14725, chacha20-ietf, 12345, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇺🇸US-SF = custom, 138.197.199.0, 13409, chacha20-ietf, 12345, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇺🇸US-CN2 = custom, 45.78.42.68, 13409, chacha20-ietf, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇭🇰 HK_ALI = custom, 47.91.156.115, 11617, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇭🇰 HK_PCCW = custom, 103.42.214.15, 18538, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇯🇵JP-Vultr = custom, 45.32.30.212, 1025, rc4-md5, nHHpgf, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇯🇵JP-Vultr(2) = custom, 45.32.53.223, 13409, chacha20, BARGAIN1, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇸🇬 SG_ALI = custom, 47.88.218.11, 16605, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇺🇸US-SF = custom, 138.197.199.0, 13409, chacha20, BARGAIN1, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇺🇸US-Video = custom, 104.149.164.79, 10834, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇺🇸US-Video2 = custom, 45.78.42.68, 13409, chacha20, BARGAIN1, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
 
 [Proxy Group]
-☁️ PROXY = select,🌍 DIRECT,🏃 AUTO,🇯🇵JP-Vultr,🇯🇵JP-Vultr(2),🇯🇵JP-Vultr(3),🇺🇸US-DG,🇺🇸US-SF,🇺🇸US-CN2
+☁️ PROXY = select,🌍 DIRECT,🏃 AUTO,🇭🇰 HK_ALI,🇭🇰 HK_PCCW,🇯🇵JP-Vultr,🇯🇵JP-Vultr(2),🇸🇬 SG_ALI,🇺🇸US-SF,🇺🇸US-Video,🇺🇸US-Video2
 🔰 PROXY = select,🌍 DIRECT,☁️ PROXY
 🍎 PROXY = select,🌍 DIRECT
-🏃 AUTO = url-test,🇯🇵JP-Vultr,🇯🇵JP-Vultr(2),🇯🇵JP-Vultr(3),🇺🇸US-DG,🇺🇸US-SF,🇺🇸US-CN2,url = http://www.gstatic.com/generate_204,interval = 1200
+🏃 AUTO = url-test,🇭🇰 HK_ALI,🇭🇰 HK_PCCW,🇯🇵JP-Vultr,🇯🇵JP-Vultr(2),🇸🇬 SG_ALI,🇺🇸US-SF,🇺🇸US-Video,🇺🇸US-Video2,url = http://www.gstatic.com/generate_204,interval = 1200
