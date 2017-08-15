@@ -3,10 +3,10 @@
 🇭🇰 HK_ALI = custom, 47.91.156.115, 11617, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇭🇰 HK_PCCW = custom, 103.42.214.15, 18538, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇯🇵JP-Video = custom, 203.76.245.138, 13409, chacha20, BARGAIN1, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇯🇵JP-CPA = custom, 45.76.197.115, 13409, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
+🇯🇵JP-CPA = custom, 45.76.197.115, 10834, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇸🇬 SG_ALI = custom, 47.88.218.11, 16605, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇺🇸US-SF = custom, 138.197.199.0, 13409, chacha20, BARGAIN1, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇺🇸US-CN2 = custom, 104.149.164.79, 15696, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
+🇺🇸US-CN2 = custom, 198.181.58.221, 15696, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇺🇸US-Video = custom, 104.149.164.79, 10834, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇺🇸US-Video2 = custom, 104.149.164.130, 10388, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇺🇸US-Download = custom, 104.160.181.27, 12667, aes-256-gcm, BARGAIN, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
