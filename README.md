@@ -8,10 +8,10 @@
 * [已支持应用](#application)
 	* Surge
 	* Shadowrocket
-	* Quantumult
+	* [Quantumult](#https://raw.githubusercontent.com/lhie1/Surge/master/Quantumult.conf)
 * [可实现功能](#function)
 * 导入方式
-    * [URL_Lite](#url)
+    * [URL（精简版）](#url)
     * [Workflow](#workflow)
     	* User Data
     	* Rule OTA
@@ -106,6 +106,7 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
         * [TestFlight](#testflinght)
         * [Emoji](#emoji)
         * [Youku](#youku)
+	* [IQIYI](#iqiyi)
     * 运行时检查更新并自动下载
     * 自动修复`module`模块地址
     * 更新规则
@@ -114,10 +115,10 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
     * [常见问题](#workflow_qa)
 
 #### User Data
-[下载地址](https://workflow.is/workflows/4c49ac83c450407aa790a2b56694195d)
+[下载地址](https://workflow.is/workflows/56fac94cfdf84f489316bf42ceb0856d)
 
 #### Rule OTA
-[下载地址](https://workflow.is/workflows/3149341326274b1d8fd0b583bc3af098)
+[下载地址](https://workflow.is/workflows/c39642382b3743fa96687231124da648)
 
 ---
 
@@ -169,12 +170,17 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
 
 * ##### Emoji
 ````
-关闭此功能`[Proxy Group]`则不再使用`Emoji`表情
+关闭此功能则不再使用`Emoji`表情
 ````
 
 * ##### Youku
 ````
-开启此功能将会屏蔽优酷视频广告（有可能会使视频加载时间过长或加载失败）
+开启此功能将会屏蔽优酷视频广告（出现任何问题请关闭此功能）
+````
+
+* ##### IQIYI
+````
+开启此功能将会屏蔽爱奇艺视频广告（出现任何问题请关闭此功能）
 ````
 
 ---
