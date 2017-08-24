@@ -9,7 +9,10 @@
 [Proxy Group]
 ☁️ PROXY = select,🌍 DIRECT,🇭🇰 HK_ALI,🇭🇰 HK_ALI2,🇯🇵JP-CPA,🇺🇸US-CN2,🇺🇸US-Video
 🔰 PROXY = select,🌍 DIRECT,☁️ PROXY
-🍎 PROXY = select,🌍 DIRECT,🇺🇸US-Video
+🍎 PROXY = select,🌍 DIRECT,🇭🇰 HK_ALI
 
-DOMAIN-SUFFIX,voiweb.com,🇯🇵JP-CN2
-DOMAIN-SUFFIX,googlevideo.com,🇯🇵JP-CN2
+[Rule]
+// Custom
+
+DOMAIN-SUFFIX,voiweb.com,🇺🇸US-Video
+DOMAIN-SUFFIX,googlevideo.com,🇺🇸US-Video
