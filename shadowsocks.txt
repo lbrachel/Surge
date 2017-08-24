@@ -1,20 +1,15 @@
 [Proxy]
 🌍 DIRECT = direct
 🇭🇰 HK_ALI = custom, 47.91.230.221, 20197, chacha20, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇯🇵JP-SERVER = custom, 138.197.199.0, 20197, chacha20, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇯🇵JP-CN2 = custom, 203.76.245.138, 20197, chacha20, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
+🇭🇰 HK_ALI2 = custom, hk3.lubanti.cf, 18538, aes-256-gcm, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇯🇵JP-CPA = custom, 45.76.197.115, 10834, aes-256-gcm, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 🇺🇸US-CN2 = custom, 198.181.58.221, 18538, aes-256-gcm, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
-🇺🇸US-SF = custom, 138.197.199.0, 20197, chacha20, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module
-🇺🇸US-Video = custom, 104.149.164.130, 16605, aes-256-gcm, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
+🇺🇸US-Video = custom, us10.lubanti.cf, 10834, aes-256-gcm, Qweasd, http://omgib13x8.bkt.clouddn.com/SSEncrypt.module, obfs=tls
 
 [Proxy Group]
-☁️ PROXY = select,🌍 DIRECT,🇭🇰 HK_ALI,🇯🇵JP-SERVER,🇯🇵JP-CN2, 🇯🇵JP-CPA,🇺🇸US-CN2,🇺🇸US-SF,🇺🇸US-Video
+☁️ PROXY = select,🌍 DIRECT,🇭🇰 HK_ALI,🇭🇰 HK_ALI2,🇯🇵JP-CPA,🇺🇸US-CN2,🇺🇸US-Video
 🔰 PROXY = select,🌍 DIRECT,☁️ PROXY
-🍎 PROXY = select,🌍 DIRECT,🇯🇵JP-CN2
-
-[Rule]
-// Custom
+🍎 PROXY = select,🌍 DIRECT,🇺🇸US-Video
 
 DOMAIN-SUFFIX,voiweb.com,🇯🇵JP-CN2
 DOMAIN-SUFFIX,googlevideo.com,🇯🇵JP-CN2
