@@ -22,7 +22,7 @@
 * [浏览器广告](#browser-ad)
 * [联系方式](#line)
 * [Q&A](#qa)
-	* [☁️ Proxy & 🔰 Proxy & 🍎 Proxy](#%EF%B8%8F-proxy---proxy---proxy)
+	* [🍃 Proxy & 🍂 Domestic & 🍎 Only](#%EF%B8%8F-proxy---proxy---proxy)
 	* [🚀 混淆模式](#-混淆模式)
 	* [🔋 Surge 耗电](#-surge-耗电)
 	* [☑️ Set as System Proxy](#%EF%B8%8F-set-as-systemproxy)
@@ -69,7 +69,7 @@ Quantumult | [@未名](https://t.me/unknownTokyo)
 
 精简版：
 
-用于`Surge/Shadowrcket_URL`导入方式，阉割了对`虾米音乐/优酷视频/百度翻译/Flex3`等广告的拦截，没有`Workflow`的节点定制以及功能开关
+用于`Surge/Shadowrcket_URL`导入方式，阉割了节点定制以及功能开关，其他部分大致相同
 ````
 Surge：https://raw.githubusercontent.com/lhie1/Surge/master/Surge_Lite.conf
 
@@ -106,7 +106,6 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
         * [TestFlight](#testflinght)
         * [Emoji](#emoji)
         * [Youku](#youku)
-	* [IQIYI](#iqiyi)
     * 运行时检查更新并自动下载
     * 自动修复`module`模块地址
     * 更新规则
@@ -115,10 +114,12 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
     * [常见问题](#workflow_qa)
 
 #### User Data
-[下载地址](https://workflow.is/workflows/56fac94cfdf84f489316bf42ceb0856d)
+[下载地址](https://workflow.is/workflows/9c534ed0d64b46369072543952e59a30)
 
 #### Rule OTA
-[下载地址](https://workflow.is/workflows/c39642382b3743fa96687231124da648)
+[下载地址](https://workflow.is/workflows/369292dc94fa4498a6adb28528829e9c)
+
+以后可通过微信公众号：墙洞说 发送“Rule” 即可获取最新 User Data + Rule OTA
 
 ---
 
@@ -127,14 +128,6 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
 ![](https://raw.githubusercontent.com/lhie1/Surge/master/images/Widget.JPG)
 
 #### Special_Proxy
-* ##### AuthKey
-
-1. 目前多个地方`虾米音乐/优酷视频/百度翻译/Flex3`等屏蔽广告需要使用`AuthKey`进行认证，防止接口被拷贝盗用
-2. 使用过程中需要对生成`AuthKey`的`IP`地址进行认证，所以需要选择代理服务器生成，避免直连情况下的`IP`地址的频繁变换导致认证失败
-3. `AuthKey`字段为接口加密数据定位符,使用`OpenSSL RSA4096`加密生成的下载用户唯一权限标识符
-4. 无`AuthKey`将导致无法请求接口返回`400`错误，`AuthKey`包含唯一信息,请求过多将导致`AuthKey`加入黑名单
-5. 网络请求`Header`可以看到`IP`及`TimeStamp`信息
-
 * ##### Google
 ````
 某些服务器/节点访问`Google`将会出现验证码，开启此功能为`Google`单独选择一个专用节点
@@ -168,21 +161,10 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
 开启此功能会在有只支持`TestFlinght`版本的规则时加载新规则
 ````
 
-* ##### Emoji
-````
-关闭此功能则不再使用`Emoji`表情
-````
-
-* ##### Youku
-````
-开启此功能将会屏蔽优酷视频广告（出现任何问题请关闭此功能）
-````
-
 * ##### IQIYI
 ````
 开启此功能将会屏蔽爱奇艺视频广告（出现任何问题请关闭此功能）
 ````
-
 ---
 
 ### MitM
@@ -275,15 +257,15 @@ Adguard：https://adguard.com/en/welcome.html
 绝大多数广告在未开启 Surge/Shadowrocket 时已经缓存到本地，广告屏蔽非立即生效，一般清理缓存就可以，部分应用需要卸载重装。
 ````
 
-#### ☁️ Proxy & 🔰 Proxy & 🍎 Proxy
+#### 🍃 Proxy & 🍂 Domestic & 🍎 Only
 ````
-☁️ Proxy：管控国外的流量；🌍 Direct - 直连，不可访问外网；代理服务器 - 可访问外网
+🍃 Proxy：管控国外的流量；🚀 Direct - 直连，不可访问外网；代理服务器 - 可访问外网
 
-🔰 Proxy：管控国内的流量；🌍 Direct - 智能分流 (Pac)；☁️ Proxy - 全局代理
+🍂 Domestic：管控国内的流量；🚀 Direct - 智能分流 (Pac)；🍃 Proxy - 全局代理
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl
+🍎 Proxy： 管控苹果的流量；如果苹果某些服务直连困难，设其为代理，可能会改善一些问题：🍎 Only - 代理服务器
 
-🍎 Proxy： 管控苹果的流量；如果苹果某些服务直连困难，设其为代理，可能会改善一些问题：🍎 Proxy - 代理服务器
-
-建议 ： ☁️ Proxy - 代理服务器；🔰 Proxy - 🌍 Direct ；🍎 Proxy - 🌍 Direct/代理服务器
+建议 ： 🍃 Proxy - 代理服务器；🍂 Domestic - 🌍 Direct ；🍎 Only - 🚀 Direct/代理服务器
 ````
 
 #### 🚀 [混淆模式](https://github.com/breakwa11/shadowsocks-rss/blob/master/ssr.md)
