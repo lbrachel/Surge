@@ -21,4 +21,4 @@
 [Rule]
 // Custom
 DOMAIN-SUFFIX,voiweb.com,🍂 Domestic
-DOMAIN-SUFFIX,googlevideo.com,🇺🇸US_DG
+DOMAIN-SUFFIX,googlevideo.com,🇯🇵JP_LINODE
