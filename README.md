@@ -117,9 +117,7 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
 [下载地址](https://workflow.is/workflows/f3301e67f06e4f2298b6d7836363b3a7)
 
 #### Rule OTA
-[下载地址](https://workflow.is/workflows/856bca17200147058d6663feb64a8343)
-
-以后可通过微信公众号：墙洞说 发送“Rule” 即可获取最新 User Data + Rule OTA
+[下载地址](https://workflow.is/workflows/94978fec6708460e93a5da01836e565b)
 
 ---
 
@@ -208,10 +206,6 @@ macOS：
 规则更新通知（新特性/教程/说明）：[http://t.me/RuleNews](http://t.me/RuleNews)
 
 购买翻墙服务：[https://爱兔联盟.com](https://爱兔联盟.com)（[了解详情](https://github.com/lhie1/tuClub/blob/master/README.md)）
-
-长时间的维护和分享离不开大家的鼓励与支持，如果帮助到您，可以考虑捐赠，谢谢。
-
-![](https://raw.githubusercontent.com/lhie1/Surge/master/images/Pay.jpeg)
 
 ---
 
