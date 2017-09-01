@@ -71,9 +71,9 @@ Quantumult | [@未名](https://t.me/unknownTokyo)
 
 用于`Surge/Shadowrcket_URL`导入方式，阉割了节点定制以及功能开关，其他部分大致相同
 ````
-Surge：https://raw.githubusercontent.com/lhie1/Surge/master/Surge_Lite.conf
+Surge：https://raw.githubusercontent.com/lhie1/Surge/master/Surge.conf
 
-Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket_Lite.conf
+Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket.conf
 ````
 导入后请务必[安装证书](#mitm)
 
@@ -114,10 +114,10 @@ Shadowrocket：https://raw.githubusercontent.com/lhie1/Surge/master/Shadowrocket
     * [常见问题](#workflow_qa)
 
 #### User Data
-[下载地址](https://workflow.is/workflows/f3301e67f06e4f2298b6d7836363b3a7)
+[下载地址](https://workflow.is/workflows/4abea8f7008342449db702f761bd45a0)
 
 #### Rule OTA
-[下载地址](https://workflow.is/workflows/94978fec6708460e93a5da01836e565b)
+[下载地址](https://workflow.is/workflows/e5efd6478529419ab06b4799ef84d7b7)
 
 ---
 
